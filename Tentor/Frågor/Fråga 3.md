@@ -5,17 +5,20 @@
 # 2024-06-05
 ![[Pasted image 20250104115521.png]]
 
+Related:
+[[Fråga 2#2024-08-27]]
+
 ---
 # 2024-08-27
 ![[Pasted image 20250104115539.png]]
 ## **ls**
 - List files
 	  
-  #Example 
+	#Example
 	Will list all files including hidden files (files with names beginning with a dot)
-	`ls -la`
+	`ls -a`
 	  
-	List  files with info
+	List files with more info
 	`ls -l` 
 	 ```
 	 drwxr-xr-x   6 eva        users         1024 Jun  8 16:46 sabon
@@ -26,8 +29,12 @@
 ## **cd**
 - change directory
 	
-	#Example 
+	#Example
+	changes directory to Desktop
+	`cd Desktop`
 	
+	Goes back in directory path
+	`cd ..`
 ## **cat**
 
 ## **nano**
