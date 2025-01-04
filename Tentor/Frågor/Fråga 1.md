@@ -11,7 +11,19 @@ What it is:
 
 
 How it works:
-You need a docker engine (like docker) to manage containers, the docker deamon process manages the containers,  
+You need a docker engine (docker) to manage containers, the docker deamon process manages the containers. 
+
+Docker engine uses several kernel features that are essential for isolating processes. Example:
+- **namespaces**:
+	  
+- **control groups**:
+  
+- **capabilities**:
+  
+- **secure computing mode**:
+  
+
+
 
 
 Compared to a virtual machine:
