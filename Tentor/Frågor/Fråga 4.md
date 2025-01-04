@@ -1,7 +1,7 @@
 # 2024-01-08
 ![[Pasted image 20250104115556.png]]
 ### How to seamlessly transition users from an old server to a new server without downtime
-* Make sure to transition *a few at a time* as to not overwhelm the system
+* ????????
 
 
 ---
