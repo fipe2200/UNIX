@@ -32,7 +32,7 @@ Docker engine uses several kernel features that are essential for isolating proc
 		* More resource intensive.
 		* Higher level of isolation.
 	* **Container** 
-		* A facade/imitation of an operating system. It's packages an executable with its dependencies needed to run.
+		* A facade/imitation of an OS. It packages an executable with its dependencies needed to run.
 		* More lightweight & portable
 
 Usage examples:
@@ -44,7 +44,18 @@ Usage examples:
 ---
 # 2024-06-05
 ![[Pasted image 20250104115333.png]]
+<<<<<<< HEAD
 ls -l /dev/sda /dev/tty
+=======
+List of what the first character can be:
+- -  = Regular file  
+* b = Block device file  
+* c = Character device file  
+* d = Directory  
+* l = Link - Symbolic link  
+* p = Pipe or First-In First-Out special file  
+* s = Socket file
+>>>>>>> origin/main
 
 b rw- rw- --- 1 root disk 8, 0 okt 12 08:18 sda
 * "b" means that this is a block device file that handles data in blocks, like a hard drive.
@@ -71,7 +82,6 @@ c rw- rw- rw- 1 root tty 5, 0 okt 12 08:08 tty
 * 0 is the minor device number
 * "okt 12 08:08" is the date and time of when it was last modified
 * tty is the device file name
-
 
 
 ---
@@ -101,7 +111,7 @@ c rw- rw- rw- 1 root tty 5, 0 okt 12 08:08 tty
 	
 	```
 	MIN	HOUR DOM MON DOW CMD
-	30 08 26 01 * echo "Hej hej"
+	30 08 26 01 * CMD
 	```
 	
 	MIN = Minute
@@ -109,12 +119,12 @@ c rw- rw- rw- 1 root tty 5, 0 okt 12 08:08 tty
 	DOM = Date
 	MON = Month
 	DOW = Day Of Week
-	**CMD** = Command
+	CMD = Command
 	
 	#Example 
 	Answer:
-	- Restarts the machine every date, month, year and day of the week at 01:00 as root user. (without needing password for sudo)
-		```00 01 * * * root /sbin/reboot ```
+	- Restarts the machine every date, month, year and day of the week at 01:00. (Using root's crontab, as then you have sudo/root privileges)
+		```00 01 * * * /sbin/reboot ```
 	
 	More:
 	- Executes the Full backup shell script (full-backup) on 10th of June, every day of the week at 08:30.
