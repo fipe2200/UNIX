@@ -55,7 +55,7 @@ b rw- rw- --- 1 root disk 8, 0 okt 12 08:18 sda
 * disk is the group owner
 * 8 is the major device number
 * 0 is the minor device number
-* "okt 12 08:18" is the date and time of when the file was last modified
+* "okt 12 08:18" is the date and time of when it was last modified
 * sda is the device file name 
 
 c rw- rw- rw- 1 root tty 5, 0 okt 12 08:08 tty
@@ -68,7 +68,7 @@ c rw- rw- rw- 1 root tty 5, 0 okt 12 08:08 tty
 * tty is the group owner
 * 5 is the major device number
 * 0 is the minor device number
-* It was last modified okt 12 08:08
+* "okt 12 08:08" is the date and time of when it was last modified
 * tty is the device file name
 
 
