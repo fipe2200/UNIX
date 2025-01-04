@@ -14,6 +14,9 @@ Compared to a virtual machine:
 Usage examples:
 
 
+
+The Docker image is a collection of files that constitute a tiny component of the operating system necessary to execute the Docker container as a standalone unit on any host.
+
 ---
 # 2024-06-05
 ![[Pasted image 20250104115333.png]]
