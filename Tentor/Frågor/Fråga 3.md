@@ -6,7 +6,7 @@
 ![[Pasted image 20250104115521.png]]
 If we have the default permissions 777, and apply these umasks, we get:
 
-777 - 755 = 22 
+777 - 755 = 022 
 777 - 500 = 277 
 777 - 110 = 667 
 read, write and execute privileges are determined using the octadecimal system.
