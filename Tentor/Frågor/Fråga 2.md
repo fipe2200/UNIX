@@ -31,3 +31,17 @@ Related:
 	- ``chmod u+rwx file`` Gives user (owner) rwx permissions.
 		- **ugoa** - **u**ser, **g**roup, **o**ther, **a**ll
 	- Resolves the potential issue of defining wrong access for a user.
+
+The numbers are 3 *octagonals* 0-7 representing *read*, *write*, & *execute*
+* 0 = ---
+* 1 = --x
+* 2 = -w-
+* 3 = -wx
+* 4 = r--
+* 5 = r-x
+* 6 = rw-
+* 7 = rwx
+
+**Umask** is an *inverted* permission mask for ``chmod`` 
+* *Umask 022* = ``chmod 755`` 
+* *Umask 475* = ``chmod 302`` 
