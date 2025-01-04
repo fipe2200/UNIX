@@ -98,7 +98,7 @@ c rw- rw- rw- 1 root tty 5, 0 okt 12 08:08 tty
 ## **Choice 2**: *"crontab"*
 - 
 	The 'crontab' file is containing the schedule of various cron entries that run scripts or Linux Commands at specified times and intervals. It is ideal for repetitive tasks such as system maintenance, backups, and updates.
-<<<<<<< HEAD
+
 
 	```MIN	HOUR DOM MON DOW CMD```
 	
@@ -109,9 +109,8 @@ c rw- rw- rw- 1 root tty 5, 0 okt 12 08:08 tty
 	DOW = Day Of Week
 	**CMD** = Command
 	
-=======
-	![[Pasted image 20250104140455.png]]
->>>>>>> origin/main
+
+
 	#Example 
 	Answer:
 	- Restarts the machine every date, month, year and day of the week at 01:00.
@@ -120,4 +119,7 @@ c rw- rw- rw- 1 root tty 5, 0 okt 12 08:08 tty
 	More:
 	- Executes the Full backup shell script (full-backup) on 10th of June, every day of the week at 08:30.
 		```30 08 10 06 * /home/maverick/full-backup```
+
+
+	![[Pasted image 20250104140455.png]]
 
