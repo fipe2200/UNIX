@@ -32,7 +32,7 @@ Docker engine uses several kernel features that are essential for isolating proc
 		* More resource intensive.
 		* Higher level of isolation.
 	* **Container** 
-		* A facade/imitation of an operating system. It's packages an executable with its dependencies needed to run.
+		* A facade/imitation of an OS. It packages an executable with its dependencies needed to run.
 		* More lightweight & portable
 
 Usage examples:
