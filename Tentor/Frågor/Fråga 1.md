@@ -99,7 +99,7 @@ c rw- rw- rw- 1 root tty 5, 0 okt 12 08:08 tty
 	
 	```
 	MIN	HOUR DOM MON DOW CMD
-	30 08 26 01 * echo "Hej hej"
+	30 08 26 01 * CMD
 	```
 	
 	MIN = Minute
@@ -111,8 +111,8 @@ c rw- rw- rw- 1 root tty 5, 0 okt 12 08:08 tty
 	
 	#Example 
 	Answer:
-	- Restarts the machine every date, month, year and day of the week at 01:00 as root user. (without needing password for sudo)
-		```00 01 * * * root /sbin/reboot ```
+	- Restarts the machine every date, month, year and day of the week at 01:00. (Using root's crontab, as then you have sudo/root privileges)
+		```00 01 * * * /sbin/reboot ```
 	
 	More:
 	- Executes the Full backup shell script (full-backup) on 10th of June, every day of the week at 08:30.
