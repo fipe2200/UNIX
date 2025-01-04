@@ -21,7 +21,7 @@ You need a docker engine (like docker) to manage containers, the docker deamon p
 		* More resource intensive.
 		* Higher level of isolation.
 	* **Container** 
-		* A facade/imitation of an operating system. It's packages an executable with its dependencies needed to run.
+		* A facade/imitation of an OS. It packages an executable with its dependencies needed to run.
 		* More lightweight & portable
 
 Usage examples:
