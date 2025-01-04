@@ -1,31 +1,23 @@
 
 # 2024-01-08
 ![[Pasted image 20250104115140.png]]
+### What it is
+- A **container** is an *isolated* *instance* of an *image*, and uses the *hosts* *kernel* features to isolate processes in the container root filesystem.
+	- Container processes *cannot* reach outside of the container, similar to *chroot*
+	- The *Docker* *image* is a collection of files that constitute a tiny component of the operating system necessary to execute the Docker container as a standalone unit on any host.
+### How it works
+You need a container engine (**docker**) to manage containers, the **dockerd** deamon process works as an interface to manage the containers. Docker creates a read/write layer to the union filesystem of an image that the container can update (*Copy-on-write* *strategy*).
 
-What it is:
-- **A container is an instance of an image,** 
-	  The Docker image is a collection of files that constitute a tiny component of the operating system necessary to execute the Docker container as a standalone unit on any host.
-	
-- **A container is an enviorment for isolated processes, the container have its own filesystem** 
-- **The container shares the host kernel**
-
-
-How it works:
-You need a docker engine (docker) to manage containers, the docker deamon process manages the containers. 
-
-Docker engine uses several kernel features that are essential for isolating processes. Example:
-- **namespaces**:
-	  
-- **control groups**:
-  
-- **capabilities**:
-  
-- **secure computing mode**:
-  
-
-
-
-### Compared to a virtual machine:
+Docker engine uses several *kernel* *features* that are essential for *isolating processes*. Example:
+- **namespaces**
+	- UserID, Filesystem mounts.
+- **control groups** (**cgroups**)
+	- Limits use of system resources, prioritizes processes over others.
+- **Capabilities**
+	- Allows processes to execute sensitive kernel operations & system calls.
+- **Secure computing mode** (**seccomp**)
+	- Restricts access to system calls, more fine-grained than **Capabilities**.
+### Compared to a virtual machine
 * Both VM's and Containers look similar on the surface, they are portable, isolated execution environments with root filesystems.
 	* **VM's** 
 		* Has it's own OS kernel, ``init`` process, & drivers that interact with hardware.
@@ -34,18 +26,14 @@ Docker engine uses several kernel features that are essential for isolating proc
 	* **Container** 
 		* A facade/imitation of an OS. It packages an executable with its dependencies needed to run.
 		* More lightweight & portable
+### Usage examples
+**Containers**
+* *Web development*:  Containers are a great choice since they are *lightweight* and are easy to deploy in a variety of environments such as development staging and production. 
+* *Cloud computing*: Are easy to scale up and scale down to meet the demand. 
+* *Continuous integration and delivery (CI/CD)*: Containers are used for *automate* the process of building, testing, and *deploying* applications.
 
-Usage examples:
-
-Containers are useful for several cases :
-
-**Web development:**  Containers are a great choice since they are lightweight and are easy to deploy in a variety of environments such as development staging and production. 
-**Cloud computing:** Are easy to scale up and scale down to meet the demand. 
-**Continuous integration and delivery (CI/CD):** Containers are used for automate the process of building, testing, and deploying applications.
-
-A useful case for Virtual machines (VM)
-
-**Testing:** Virtual machines are great to test new software in a safe environment if the software breaks the system you can restart the VM or just start a new VM. Since VM are isolated it won't risk it's surrounding 
+**VM**
+* *Testing*: Virtual machines are great to test new software in a safe environment if the software breaks the system you can restart the VM or just start a new VM. Since VM are isolated it won't risk it's surroundings.
 
 ![[Pasted image 20250104131953.png]]
 
