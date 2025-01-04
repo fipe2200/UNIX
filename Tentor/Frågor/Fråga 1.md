@@ -43,23 +43,21 @@ Usage examples:
 - **Choice 1**: *"at"*
 	The ‘at’ is a command that allows the users to schedule one-time tasks or recurring jobs at a specific time and date.
 	
-	#Eample 
-		Schedules a one-time task to echo “Backup complete” at 09:00
-		`echo "echo 'Backup complete'" | at 09:00
-		`
-		Schedules a one-time task to echo “Backup complete” at 09:00
-		`echo "echo 'Backup complete'" | at 9am
-		`
-		Schedules a one-time task to echo “Backup complete” at 09:00
-		`echo "echo 'Backup complete'" | at 012624
-		`
+	#Example 
+	* Schedules a one-time task to echo “Backup complete” at 09:00
+		```echo "echo 'Backup complete'" | at 09:00```
+		
+	- Schedules a one-time task to echo “Backup complete” at 09:00
+		```echo "echo 'Backup complete'" | at 9am```
+		
+	- Schedules a one-time task to echo “Backup complete” at 09:00
+		```echo "echo 'Backup complete'" | at 012624```
 		
 
 - **Choice 2**: *"crontab"*
 	The 'crontab' file is containing the schedule of various cron entries that run scripts or Linux Commands at specified times and intervals. It is ideal for repetitive tasks such as system maintenance, backups, and updates.
 	
-	#Eample 
+	#Example 
 		MIN	HOUR DOM MON DOW **CMD**
 		`30 08 10 06 * /home/maverick/full-backup
 		`
-		
