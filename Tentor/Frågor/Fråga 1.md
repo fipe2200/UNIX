@@ -7,8 +7,7 @@ What it is:
 	  The Docker image is a collection of files that constitute a tiny component of the operating system necessary to execute the Docker container as a standalone unit on any host.
 	
 - **A container is an enviorment for isolated processes, the container have its own filesystem** 
-- 
-
+- **The container shares the host kernel**
 
 
 How it works:
