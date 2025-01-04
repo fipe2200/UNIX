@@ -13,8 +13,15 @@ What it is:
 How it works:
 
 
-Compared to a virtual machine:
-
+### Compared to a virtual machine:
+* Both VM's and Containers look similar on the surface, they are portable, isolated execution environments with root filesystems.
+	* **VM's** 
+		* Has it's own OS kernel, ``init`` process, & drivers that interact with hardware.
+		* More resource intensive.
+		* Higher level of isolation.
+	* **container** 
+		* A facade/imitation of an operating system. It's packages an executable with its dependencies needed to run.
+		* More lightweight & portable
 
 Usage examples:
 
