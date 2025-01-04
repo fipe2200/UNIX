@@ -3,9 +3,13 @@
 ![[Pasted image 20250104115407.png]]
 
 ---
-# 2024-06-05
+# 2024-06-05 
 ![[Pasted image 20250104115423.png]]
 
+
+
+Related:
+[[Fråga 1#**Choice 2** *"crontab"*]]
 
 ---
 # 2024-08-27

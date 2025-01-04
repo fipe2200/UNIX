@@ -25,7 +25,6 @@ Docker engine uses several kernel features that are essential for isolating proc
 
 
 
-
 ### Compared to a virtual machine:
 * Both VM's and Containers look similar on the surface, they are portable, isolated execution environments with root filesystems.
 	* **VM's** 
@@ -46,7 +45,7 @@ Usage examples:
 # 2024-06-05
 ![[Pasted image 20250104115333.png]]
 b rw- rw- --- 1 root disk 8, 0 okt 12 08:18 sda
-* "b" means that this is a block device file like a hard drive.
+* "b" means that this is a block device file that handles data in blocks, like a hard drive.
 * The first rw- means that the owner has read and write privileges, but no execution rights.
 * The second rw- means that groups have read and write privileges, but no execution rights.
 * The remaining --- means that other users have no rights to the file. 
@@ -55,11 +54,11 @@ b rw- rw- --- 1 root disk 8, 0 okt 12 08:18 sda
 * disk is the group owner
 * 8 is the major device number
 * 0 is the minor device number
-* "okt 12 08:18" is the date and time of when the file was last modified
-* sda is the name of the file
+* "okt 12 08:18" is the date and time of when it was last modified
+* sda is the device file name 
 
 c rw- rw- rw- 1 root tty 5, 0 okt 12 08:08 tty
-* "c" means that this is a character device file like a terminal. 
+* "c" means that this is a character device file that handles data as streams of characters, like a terminal. 
 * The first rw-- means that the owner has read and write privileges, but no execution rights.
 * The second rw-- means that groups have read and write privileges, but no execution rights.
 * The last rw- means that other users have read and write privileges, but no execution rights.
@@ -68,16 +67,16 @@ c rw- rw- rw- 1 root tty 5, 0 okt 12 08:08 tty
 * tty is the group owner
 * 5 is the major device number
 * 0 is the minor device number
-* It was last modified okt 12 08:08
-* tty is the name of the file
+* "okt 12 08:08" is the date and time of when it was last modified
+* tty is the device file name
 
 
 
 ---
 # 2024-08-27
 ![[Pasted image 20250104115351.png]]
-
-- **Choice 1**: *"at"*
+## **Choice 1**: *"at"*
+- 
 	The ‘at’ is a command that allows the users to schedule one-time tasks or recurring jobs at a specific time and date.
 	
 	#Example 
@@ -96,8 +95,10 @@ c rw- rw- rw- 1 root tty 5, 0 okt 12 08:08 tty
 		```echo "echo 'Backup complete'" | at 012624```
 		
 
-- **Choice 2**: *"crontab"*
+## **Choice 2**: *"crontab"*
+- 
 	The 'crontab' file is containing the schedule of various cron entries that run scripts or Linux Commands at specified times and intervals. It is ideal for repetitive tasks such as system maintenance, backups, and updates.
+<<<<<<< HEAD
 
 	```MIN	HOUR DOM MON DOW CMD```
 	
@@ -108,6 +109,9 @@ c rw- rw- rw- 1 root tty 5, 0 okt 12 08:08 tty
 	DOW = Day Of Week
 	**CMD** = Command
 	
+=======
+	![[Pasted image 20250104140455.png]]
+>>>>>>> origin/main
 	#Example 
 	Answer:
 	- Restarts the machine every date, month, year and day of the week at 01:00.
