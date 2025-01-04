@@ -28,3 +28,26 @@ Usage examples:
 # 2024-08-27
 ![[Pasted image 20250104115351.png]]
 
+- **Choice 1**: *"at"*
+	The ‘at’ is a command that allows the users to schedule one-time tasks or recurring jobs at a specific time and date.
+	
+	#Eample 
+		Schedules a one-time task to echo “Backup complete” at 09:00
+		`echo "echo 'Backup complete'" | at 09:00
+		`
+		Schedules a one-time task to echo “Backup complete” at 09:00
+		`echo "echo 'Backup complete'" | at 9am
+		`
+		Schedules a one-time task to echo “Backup complete” at 09:00
+		`echo "echo 'Backup complete'" | at 012624
+		`
+		
+
+- **Choice 2**: *"crontab"*
+	The 'crontab' is a file containing the schedule of various cron entries that should be run at specified times.
+	
+	#Eample 
+		MIN	HOUR DOM MON DOW **CMD**
+		`30 08 10 06 * /home/maverick/full-backup
+		`
+		
