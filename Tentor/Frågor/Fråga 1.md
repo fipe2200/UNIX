@@ -75,8 +75,8 @@ c rw- rw- rw- 1 root tty 5, 0 okt 12 08:08 tty
 ---
 # 2024-08-27
 ![[Pasted image 20250104115351.png]]
-
-- **Choice 1**: *"at"*
+## **Choice 1**: *"at"*
+- 
 	The ‘at’ is a command that allows the users to schedule one-time tasks or recurring jobs at a specific time and date.
 	
 	#Example 
@@ -93,7 +93,8 @@ c rw- rw- rw- 1 root tty 5, 0 okt 12 08:08 tty
 		```echo "echo 'Backup complete'" | at 012624```
 		
 
-- **Choice 2**: *"crontab"*
+## **Choice 2**: *"crontab"*
+- 
 	The 'crontab' file is containing the schedule of various cron entries that run scripts or Linux Commands at specified times and intervals. It is ideal for repetitive tasks such as system maintenance, backups, and updates.
 	![[Pasted image 20250104140455.png]]
 	#Example 
