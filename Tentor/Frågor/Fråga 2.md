@@ -14,8 +14,11 @@
 ---
 # 2024-06-05 
 ![[Pasted image 20250104115423.png]]
-
-
+## **Crontab-File**:
+```
+MIN HOUR DOM MON DOW CMD
+00 03 * * 2 CMD
+```
 
 Related:
 [[Fråga 1#**Choice 2** *"crontab"*]]
