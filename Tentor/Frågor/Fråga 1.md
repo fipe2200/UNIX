@@ -3,7 +3,13 @@
 ![[Pasted image 20250104115140.png]]
 
 What it is:
-A container is an instance of an images, A container is an enviorment for isolated processes,
+- **A container is an instance of an image,** 
+	  The Docker image is a collection of files that constitute a tiny component of the operating system necessary to execute the Docker container as a standalone unit on any host.
+	
+- **A container is an enviorment for isolated processes, the container have its own filesystem** 
+- 
+
+
 
 How it works:
 
@@ -12,10 +18,6 @@ Compared to a virtual machine:
 
 
 Usage examples:
-
-
-
-The Docker image is a collection of files that constitute a tiny component of the operating system necessary to execute the Docker container as a standalone unit on any host.
 
 ---
 # 2024-06-05
