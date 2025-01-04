@@ -20,7 +20,7 @@ You need a docker engine (like docker) to manage containers, the docker deamon p
 		* Has it's own OS kernel, ``init`` process, & drivers that interact with hardware.
 		* More resource intensive.
 		* Higher level of isolation.
-	* **container** 
+	* **Container** 
 		* A facade/imitation of an operating system. It's packages an executable with its dependencies needed to run.
 		* More lightweight & portable
 
