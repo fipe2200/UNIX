@@ -11,6 +11,7 @@ What it is:
 
 
 How it works:
+You need a docker engine (like docker) to manage containers, the docker deamon process manages the containers,  
 
 
 ### Compared to a virtual machine:
@@ -25,10 +26,17 @@ How it works:
 
 Usage examples:
 
+
+
+![[Pasted image 20250104131953.png]]
+
 ---
 # 2024-06-05
 ![[Pasted image 20250104115333.png]]
 
+
+
 ---
 # 2024-08-27
 ![[Pasted image 20250104115351.png]]
+
