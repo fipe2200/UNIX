@@ -36,14 +36,14 @@ Related:
 	- Resolves the potential issue of defining wrong access for a user.
 
 The numbers are 3 *octagonals* 0-7 representing *read*, *write*, & *execute*
-* 0 = ---
-* 1 = --x
-* 2 = -w-
-* 3 = -wx
-* 4 = r--
-* 5 = r-x
-* 6 = rw-
-* 7 = rwx
+* 0 = 000 = ---
+* 1 = 001 = --x
+* 2 = 010 = -w-
+* 3 = 011 = -wx
+* 4 = 100 = r--
+* 5 = 101 = r-x
+* 6 = 110 = rw-
+* 7 = 111 = rwx
 
 **Umask** is an *inverted* permission mask for ``chmod`` 
 * *Umask 022* = ``chmod 755`` 

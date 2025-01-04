@@ -25,7 +25,7 @@ Docker engine uses several *kernel* *features* that are essential for *isolating
 		* Higher level of isolation.
 	* **Container** 
 		* A facade/imitation of an OS. It packages an executable with its dependencies needed to run.
-		* More lightweight & portable
+		* More lightweight & portable.
 ### Usage examples
 **Containers**
 * *Web development*:  Containers are a great choice since they are *lightweight* and are easy to deploy in a variety of environments such as development staging and production. 
