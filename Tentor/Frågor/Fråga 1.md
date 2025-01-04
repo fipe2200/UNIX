@@ -44,6 +44,8 @@ Usage examples:
 ---
 # 2024-06-05
 ![[Pasted image 20250104115333.png]]
+ls -l /dev/sda /dev/tty
+
 b rw- rw- --- 1 root disk 8, 0 okt 12 08:18 sda
 * "b" means that this is a block device file that handles data in blocks, like a hard drive.
 * The first rw- means that the owner has read and write privileges, but no execution rights.
