@@ -37,13 +37,24 @@ Docker engine uses several kernel features that are essential for isolating proc
 
 Usage examples:
 
+Containers are useful for several cases :
 
+**Web development:**  Containers are a great choice since they are lightweight and are easy to deploy in a variety of environments such as development staging and production. 
+**Cloud computing:** Are easy to scale up and scale down to meet the demand. 
+**Continuous integration and delivery (CI/CD):** Containers are used for automate the process of building, testing, and deploying applications.
+
+A useful case for Virtual machines (VM)
+
+**Testing:** Virtual machines are great to test new software in a safe environment if the software breaks the system you can restart the VM or just start a new VM. Since VM are isolated it won't risk it's surrounding 
 
 ![[Pasted image 20250104131953.png]]
 
 ---
 # 2024-06-05
 ![[Pasted image 20250104115333.png]]
+<<<<<<< HEAD
+ls -l /dev/sda /dev/tty
+=======
 List of what the first character can be:
 - -  = Regular file  
 * b = Block device file  
@@ -52,6 +63,7 @@ List of what the first character can be:
 * l = Link - Symbolic link  
 * p = Pipe or First-In First-Out special file  
 * s = Socket file
+>>>>>>> origin/main
 
 b rw- rw- --- 1 root disk 8, 0 okt 12 08:18 sda
 * "b" means that this is a block device file that handles data in blocks, like a hard drive.
