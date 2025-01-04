@@ -9,23 +9,31 @@
 You need a container engine (**docker**) to manage containers, the **dockerd** deamon process works as an interface to manage the containers. Docker creates a read/write layer to the union filesystem of an image that the container can update (*Copy-on-write* *strategy*).
 
 Docker engine uses several *kernel* *features* that are essential for *isolating processes*. Example:
-- **namespaces**
-	- UserID, Filesystem mounts.
-- **control groups** (**cgroups**)
-	- Limits use of system resources, prioritizes processes over others.
-- **Capabilities**
-	- Allows processes to execute sensitive kernel operations & system calls.
-- **Secure computing mode** (**seccomp**)
-	- Restricts access to system calls, more fine-grained than **Capabilities**.
+- **namespaces** - UserID, Filesystem mounts.
+- **control groups** (**cgroups**) - Limits use of system resources, prioritizes processes over others.
+- **Capabilities** - Allows processes to execute sensitive kernel operations & system calls.
+- **Secure computing mode** (**seccomp**) - Restricts access to system calls, a more fine-grained **Capabilities**
 ### Compared to a virtual machine
 * Both VM's and Containers look similar on the surface, they are portable, isolated execution environments with root filesystems.
+* **Differences** 
+* #note man behöver nog inte nämna allt, men det kanske är bra att ha ett hum om det
 	* **VM's** 
-		* Has it's own OS kernel, ``init`` process, & drivers that interact with hardware.
-		* More resource intensive.
-		* Higher level of isolation.
+		* Has it's own OS *kernel*, ``init`` process, & drivers that *interact* *with* *hardware*.
+		* *Requires* full boot procedure; starts in 1-2 min
+		* *Long-lived*.
+		* Has *dedicated* virtual disks through hypervisor.
+		* Images measured in *GB*.
+		* *Complete isolation* among guests.
+		* More *resource* intensive.
+		* May run *multiple* independent OS *side by side*.
 	* **Container** 
-		* A facade/imitation of an OS. It packages an executable with its dependencies needed to run.
-		* More lightweight & portable.
+		* Is a facade/imitation of an OS. It packages an executable with its dependencies needed to run.
+		* *No boot required*; processes run directly by the kernel; starts in <1 sec.
+		* *Frequently* *replaced*.
+		* Filesystem is a *layered construct* defined by the container engine (**docker**).
+		* Images measured in *MB*.
+		* More *lightweight* & *portable*.
+		* Must run the *same kernel as host* (OS may differ).
 ### Usage examples
 **Containers**
 * *Web development*:  Containers are a great choice since they are *lightweight* and are easy to deploy in a variety of environments such as development staging and production. 
@@ -40,44 +48,44 @@ Docker engine uses several *kernel* *features* that are essential for *isolating
 ---
 # 2024-06-05
 ![[Pasted image 20250104115333.png]]
+``ls -l /dev/sda /dev/tty``
 
-ls -l /dev/sda /dev/tty
+List of what the *first* *character* can be:```
+```
+- = Regular file  (text file)
+b = Block device file  (hard drive)
+c = Character device file  (terminal)
+d = Directory  (/home)
+l = Link / Symbolic link
+p = Pipe or First-In First-Out special file  (intermediary file between processes)
+s = Socket file (data exchange through socket, opendkim.sock)
+```
 
-List of what the first character can be:
-- -  = Regular file  
-* b = Block device file  
-* c = Character device file  
-* d = Directory  
-* l = Link - Symbolic link  
-* p = Pipe or First-In First-Out special file  
-* s = Socket file
-
-b rw- rw- --- 1 root disk 8, 0 okt 12 08:18 sda
-* "b" means that this is a block device file that handles data in blocks, like a hard drive.
-* The first rw- means that the owner has read and write privileges, but no execution rights.
-* The second rw- means that groups have read and write privileges, but no execution rights.
-* The remaining --- means that other users have no rights to the file. 
-* "1" indicates that there is one hard link referring to this file. 
-* root is the owner
-* disk is the group owner
-* 8 is the major device number
-* 0 is the minor device number
-* "okt 12 08:18" is the date and time of when it was last modified
-* sda is the device file name 
-
-c rw- rw- rw- 1 root tty 5, 0 okt 12 08:08 tty
-* "c" means that this is a character device file that handles data as streams of characters, like a terminal. 
-* The first rw-- means that the owner has read and write privileges, but no execution rights.
-* The second rw-- means that groups have read and write privileges, but no execution rights.
-* The last rw- means that other users have read and write privileges, but no execution rights.
-* This file has "1" hard link referring to it
-* root is the owner
-* tty is the group owner
-* 5 is the major device number
-* 0 is the minor device number
-* "okt 12 08:08" is the date and time of when it was last modified
-* tty is the device file name
-
+* ``b rw- rw- --- 1 root disk 8, 0 okt 12 08:18 sda``
+	* "**b**" means *block device file*, it handles data in *blocks*. #Example *hard drive* (sda).
+	* The *first* **rw-** means that the *owner users* has read and write privileges, but no execution rights.
+	* The *second* **rw-** means that *group users* have read and write privileges, but no execution rights.
+	* The *last* **---** means that *other* *users* have no rights to the file. 
+	* "**1**" indicates that there is one *hard link* referring to this file. 
+	* **root** is the *owner user*.
+	* **disk** is the *owner group*.
+	* **8** is the *major* device number
+	* **0** is the *minor* device number
+	* "**okt 12 08:18**" is the *date* and *time* of when it was *last modified*
+	* **sda** is the device *file name* 
+ 
+* ``c rw- rw- rw- 1 root tty 5, 0 okt 12 08:08 tty``
+	* "**c**" means *character* *device file*, it handles data as *streams of characters* #Example *terminal* (tty). 
+	* The *first* **rw-** means that the *owner users* has read and write privileges, but no execution rights.
+	* The *second* **rw**- means that *group users* have read and write privileges, but no execution rights.
+	* The *last* **rw**- means that *other users* have read and write privileges, but no execution rights.
+	* This file has "**1**" *hard link* referring to it.
+	* **root** is the *owner user*.
+	* **tty** is the *owner group*.
+	* **5** is the *major* device number.
+	* **0** is the *minor* device number.
+	* "**okt 12 08:08**" is the *date* and *time* of when it was *last modified*.
+	* **tty** is the device *file name*.
 
 ---
 # 2024-08-27

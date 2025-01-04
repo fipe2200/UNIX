@@ -31,7 +31,7 @@ Related:
 	-  ``chmod 774 file`` Gives *user*/*group*/*other* rwx/rwx/r-- permissions.
 		- May be bad as it could sever access to processes you might not be aware of.
 - **Letters**: May define specific users access permission.
-	- ``chmod u+rwx file`` Gives user (owner) rwx permissions.
+	- ``chmod u+rwx file`` Gives *user* (*owner*) rwx permissions.
 		- **ugoa** - **u**ser, **g**roup, **o**ther, **a**ll
 	- Resolves the potential issue of defining wrong access for a user.
 

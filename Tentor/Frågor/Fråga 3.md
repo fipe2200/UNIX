@@ -1,5 +1,18 @@
 # 2024-01-08
 ![[Pasted image 20250104115503.png]]
+### What does the kernel do?
+The **kernel** acts as a "central government" of a UNIX/Linux system. It's responsible for *enforcing rules*, *sharing* *resources*, and *providing* *core* *services* that user processes rely on.
+* Acts as a high-level interface for the systems *hardware*.
+	* Similar to an *API* in programming.
+* #Example In lab 2 we changed the niceness of processes using ``nice`` & ``renice``, a process' *niceness* represents a numerical hint for the kernel about the process' priority for accessing the *CPU*. 
+### What can be found in the kernel space?
+* Management & abstraction of **hardware** **devices**.
+* **Processes** & **threads** (and ways for them to communicate)
+* Management of **memory** (virtual memory & memory-space protection)
+* **I/O** facilities (filesystems, network interfaces, serial interfaces...)
+* Housekeeping **functions** (startup, shutdown, timers, multitasking...)
+* #Example In lab 2 we accessed kernel summary statistics about *threads*, *memory*, *paging*, *interrupt* activity and more using ``vmstat``. 
+* #Example In lab 2 we ran ``dmesg`` to access the *kernel ring buffer*, which contains logs of the kernel boot process & console output.
 
 ---
 # 2024-06-05
