@@ -25,7 +25,6 @@ Docker engine uses several kernel features that are essential for isolating proc
 
 
 
-
 ### Compared to a virtual machine:
 * Both VM's and Containers look similar on the surface, they are portable, isolated execution environments with root filesystems.
 	* **VM's** 
@@ -96,7 +95,7 @@ c rw- rw- rw- 1 root tty 5, 0 okt 12 08:08 tty
 
 - **Choice 2**: *"crontab"*
 	The 'crontab' file is containing the schedule of various cron entries that run scripts or Linux Commands at specified times and intervals. It is ideal for repetitive tasks such as system maintenance, backups, and updates.
-	
+	![[Pasted image 20250104140455.png]]
 	#Example 
 		MIN	HOUR DOM MON DOW **CMD**
 		```30 08 10 06 * /home/maverick/full-backup```
