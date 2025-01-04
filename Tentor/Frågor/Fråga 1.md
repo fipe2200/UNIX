@@ -81,6 +81,9 @@ c rw- rw- rw- 1 root tty 5, 0 okt 12 08:08 tty
 	The ‘at’ is a command that allows the users to schedule one-time tasks or recurring jobs at a specific time and date.
 	
 	#Example 
+	- Schedules a one-time task to restart the system at 01:00
+		```sudo restart | at 01:00```
+		
 	* Schedules a one-time task to echo “Backup complete” at 09:00
 		```echo "echo 'Backup complete'" | at 09:00```
 		
@@ -96,5 +99,4 @@ c rw- rw- rw- 1 root tty 5, 0 okt 12 08:08 tty
 	
 	#Example 
 		MIN	HOUR DOM MON DOW **CMD**
-		`30 08 10 06 * /home/maverick/full-backup
-		`
+		```30 08 10 06 * /home/maverick/full-backup```
