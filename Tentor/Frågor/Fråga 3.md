@@ -21,9 +21,13 @@
 	 drwxr-xr-x   6 eva        users         1024 Jun  8 16:46 sabon
 	 -rw-------   1 eva        users         1564 Apr 28 14:35 splus
 	 ``` 
-	 
+	Related:
+	[[Fråga 1#2024-06-05]]
 ## **cd**
-
+- change directory
+	
+	#Example 
+	
 ## **cat**
 
 ## **nano**

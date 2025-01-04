@@ -44,9 +44,9 @@ Usage examples:
 ---
 # 2024-06-05
 ![[Pasted image 20250104115333.png]]
-<<<<<<< HEAD
+
 ls -l /dev/sda /dev/tty
-=======
+
 List of what the first character can be:
 - -  = Regular file  
 * b = Block device file  
@@ -55,7 +55,6 @@ List of what the first character can be:
 * l = Link - Symbolic link  
 * p = Pipe or First-In First-Out special file  
 * s = Socket file
->>>>>>> origin/main
 
 b rw- rw- --- 1 root disk 8, 0 okt 12 08:18 sda
 * "b" means that this is a block device file that handles data in blocks, like a hard drive.
