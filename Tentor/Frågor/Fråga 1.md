@@ -3,7 +3,7 @@
 ![[Pasted image 20250104115140.png]]
 
 What it is:
-
+A container is an instance of an images, A container is an enviorment for isolated processes,
 
 How it works:
 
