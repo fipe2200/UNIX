@@ -6,17 +6,17 @@
 	- Container processes *cannot* reach outside of the container, similar to *chroot*
 	- The *Docker* *image* is a collection of files that constitute a tiny component of the operating system necessary to execute the Docker container as a standalone unit on any host.
 ### How it works
-You need a container engine (**docker**) to manage containers, the **dockerd** deamon process works as an interface to manage the containers. Docker creates a read/write layer to the union filesystem of an image that the container can update (*Copy-on-write* *strategy*).
+You need a container engine (**docker**) to *manage* containers, the **dockerd** deamon process works as an interface to manage the containers. Docker *creates* a read/write layer to the *union filesystem* of an image that the container can update (this is called a *Copy-on-write* *strategy*).
 
 Docker engine uses several *kernel* *features* that are essential for *isolating processes*. Example:
-- **namespaces** - UserID, Filesystem mounts.
+- **namespaces** - UserID, Filesystem mounts...
 - **control groups** (**cgroups**) - Limits use of system resources, prioritizes processes over others.
 - **Capabilities** - Allows processes to execute sensitive kernel operations & system calls.
 - **Secure computing mode** (**seccomp**) - Restricts access to system calls, a more fine-grained **Capabilities**
 ### Compared to a virtual machine
 * Both VM's and Containers look similar on the surface, they are portable, isolated execution environments with root filesystems.
 * **Differences** 
-* #note man behöver nog inte nämna allt, men det kanske är bra att ha ett hum om det
+* ##### note man behöver nog inte memorera allt detta, men det är nog bra att få en överblick och förstå skillnaderna mellan dem
 	* **VM's** 
 		* Has it's own OS *kernel*, ``init`` process, & drivers that *interact* *with* *hardware*.
 		* *Requires* full boot procedure; starts in 1-2 min
