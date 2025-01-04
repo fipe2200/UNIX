@@ -1,7 +1,11 @@
 
 # 2024-01-08
 ![[Pasted image 20250104115140.png]]
+<<<<<<< HEAD
 kuyegfuygfuysdfgskuygsdkuyfgoiudsyfgudysgfsduoyg heeeeejsanaaaaan leverpastej
+=======
+kuyegfuygfuysdfgskuygsdkuyfgoiudsyfgudysgfsduoyghejhejhej
+>>>>>>> origin/main
 
 
 ---
