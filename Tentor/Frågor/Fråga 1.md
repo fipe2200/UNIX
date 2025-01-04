@@ -44,6 +44,15 @@ Usage examples:
 ---
 # 2024-06-05
 ![[Pasted image 20250104115333.png]]
+List of what the first character can be:
+- -  = Regular file  
+* b = Block device file  
+* c = Character device file  
+* d = Directory  
+* l = Link - Symbolic link  
+* p = Pipe or First-In First-Out special file  
+* s = Socket file
+
 b rw- rw- --- 1 root disk 8, 0 okt 12 08:18 sda
 * "b" means that this is a block device file that handles data in blocks, like a hard drive.
 * The first rw- means that the owner has read and write privileges, but no execution rights.
@@ -69,7 +78,6 @@ c rw- rw- rw- 1 root tty 5, 0 okt 12 08:08 tty
 * 0 is the minor device number
 * "okt 12 08:08" is the date and time of when it was last modified
 * tty is the device file name
-
 
 
 ---
