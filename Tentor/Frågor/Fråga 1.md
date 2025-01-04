@@ -107,7 +107,7 @@ c rw- rw- rw- 1 root tty 5, 0 okt 12 08:08 tty
 	DOM = Date
 	MON = Month
 	DOW = Day Of Week
-	**CMD** = Command
+	CMD = Command
 	
 	#Example 
 	Answer:
