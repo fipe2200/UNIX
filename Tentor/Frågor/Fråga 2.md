@@ -12,9 +12,13 @@
 	1. ``sudo vim /etc/default/grub`` -> comment out *GRUB_HIDDEN_TIMEOUT=0*
 8. ``sudo update-grub`` & ``sudo reboot`` 
 ---
-# 2024-06-05
+# 2024-06-05 
 ![[Pasted image 20250104115423.png]]
 
+
+
+Related:
+[[Fråga 1#**Choice 2** *"crontab"*]]
 
 ---
 # 2024-08-27
