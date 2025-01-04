@@ -81,9 +81,11 @@ c rw- rw- rw- 1 root tty 5, 0 okt 12 08:08 tty
 	The ‘at’ is a command that allows the users to schedule one-time tasks or recurring jobs at a specific time and date.
 	
 	#Example 
+	Answer:
 	- Schedules a one-time task to restart the system at 01:00
 		```sudo restart | at 01:00```
-		
+	
+	More:
 	* Schedules a one-time task to echo “Backup complete” at 09:00
 		```echo "echo 'Backup complete'" | at 09:00```
 		
@@ -96,7 +98,22 @@ c rw- rw- rw- 1 root tty 5, 0 okt 12 08:08 tty
 
 - **Choice 2**: *"crontab"*
 	The 'crontab' file is containing the schedule of various cron entries that run scripts or Linux Commands at specified times and intervals. It is ideal for repetitive tasks such as system maintenance, backups, and updates.
+
+	```MIN	HOUR DOM MON DOW CMD```
+	
+	MIN = Minute
+	HOUR = Hour
+	DOM = Date
+	MON = Month
+	DOW = Day Of Week
+	**CMD** = Command
 	
 	#Example 
-		MIN	HOUR DOM MON DOW **CMD**
+	Answer:
+	- Restarts the machine every date, month, year and day of the week at 01:00.
+		```00 01 * * * sudo restart ```
+	
+	More:
+	- Executes the Full backup shell script (full-backup) on 10th of June, every day of the week at 08:30.
 		```30 08 10 06 * /home/maverick/full-backup```
+
