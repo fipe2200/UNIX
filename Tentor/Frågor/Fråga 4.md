@@ -44,7 +44,7 @@
 * **SAMBA** is best used to share files from *UNIX* to a *windows* computer. Although *FTP* and *NFS* **can** work, *samba* is *designed* to share between UNIX and windows, as windows uses the **SMB** **protocol** (*Server Message Block*) for file and printer network sharing, which a samba server also implements.
 - #Example 
 	- In lab 3 we assigned *samba* *passwords* to the users that will access the share ``smbpasswd -a <user>`` then validated them ``smbpasswd -e user``.
-	- We defined *user* *access* and further *restrictions* to the server in the */etc/samba/smb.conf* configuration file.
+	- We defined the *share* *name*, *user* *access* and further *restrictions* to the server in the */etc/samba/smb.conf* configuration file.
 	- Then connect to the samba server ``smbclient //<server ip>/<name of share>``.
 
 - **FTP** is a protocol for sending files over a network, and is compatible over different filesystems.
