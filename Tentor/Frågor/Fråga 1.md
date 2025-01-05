@@ -8,7 +8,7 @@
 ### How it works
 * You need a container engine (**docker**) to *manage* containers, the **dockerd** deamon process works as an interface to manage the containers. Docker *creates* a read/write layer to the *union filesystem* of an image that the container can update (this is called a *Copy-on-write* *strategy*).
 
-Docker engine uses several *kernel* *features* that are essential for *isolating processes*. 
+* Docker engine uses several *kernel* *features* that are essential for *isolating processes*. 
 * #Example
 	- **namespaces** - UserID, Filesystem mounts...
 	- **control groups** (**cgroups**) - Limits use of system resources, prioritizes processes over others.
@@ -17,7 +17,7 @@ Docker engine uses several *kernel* *features* that are essential for *isolating
 ### Compared to a virtual machine
 * Both VM's and Containers look similar on the surface, they are both *portable*, *isolated* & *execution* *environments* with root filesystems.
 * **Differences** 
-* ##### note man behöver nog inte memorera allt detta, men det är nog bra att få en överblick och förstå skillnaderna mellan dem
+* #### note man behöver nog inte memorera allt detta, men det är nog bra att få en överblick och förstå skillnaderna mellan dem
 	* **VM's** 
 		* Has it's own OS *kernel*, ``init`` process, & drivers that *interact* *with* *hardware*.
 		* *Requires* full boot procedure; starts in 1-2 min
@@ -28,7 +28,7 @@ Docker engine uses several *kernel* *features* that are essential for *isolating
 		* More *resource* intensive.
 		* May run *multiple* independent OS *side by side*.
 	* **Container** 
-		* Is a facade/imitation of an OS. It packages an executable with its dependencies needed to run.
+		* Is a *facade*/*imitation* of an OS. It packages an executable with its dependencies needed to run.
 		* *No boot required*; processes run directly by the kernel; starts in <1 sec.
 		* *Frequently* *replaced*.
 		* Filesystem is a *layered construct* defined by the container engine (**docker**).

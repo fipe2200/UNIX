@@ -35,7 +35,7 @@ Related:
 		- **ugoa** - **u**ser, **g**roup, **o**ther, **a**ll
 	- Resolves the potential issue of defining wrong access for a user.
 
-The numbers are 3 *octagonals* 0-7 representing *read*, *write*, & *execute*
+The numbers are 3 *octagonals* 0-7 representing *read*, *write*, & *execute* permissions.
 * 0 = 000 = ---
 * 1 = 001 = --x
 * 2 = 010 = -w-
@@ -45,6 +45,7 @@ The numbers are 3 *octagonals* 0-7 representing *read*, *write*, & *execute*
 * 6 = 110 = rw-
 * 7 = 111 = rwx
 
-**Umask** is an *inverted* permission mask for ``chmod`` 
-* *Umask 022* = ``chmod 755`` 
-* *Umask 475* = ``chmod 302`` 
+**Umask** is an *inverted* permission mask for the ``chmod`` *octagonals*
+ ``0 => 7 | 1 => 6 | 2 => 5 | 3 => 4 | 4 => 3 | 5 => 2 | 6 => 1 | 7 => 0``
+* *Umask 022* => ``chmod 755`` => rwx|r-x|r-x
+* *Umask 475* => ``chmod 302`` => -wx|---|-w-
