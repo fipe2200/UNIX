@@ -4,8 +4,10 @@
 * ????????
 * **complete guess**: 
 	* Make a *backup* of your environment into the new server using ``rsync``
+	* Run it there to make sure everything works as intended
+	* Migrate users little by little as to not overwhelm the server.
 	* something something 
-	* 
+#### (inte klar)
 
 
 ---
