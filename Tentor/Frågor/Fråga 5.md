@@ -27,7 +27,7 @@ Log files can be found at */var/log/*
 	* A *glue* record is required to avoid circular referencing in a dependency structure.
 		* #Example From lab 4: The name server *ns1.duckburg.cali.* depends on the parent *duckburg.cali.* , but the *DNS* *resolver* won't be able to resolve *duckburg.cali.* without knowing the IP address of *ns1.duckburg.cali.* , this causes a circular reference loop as it includes *duckburg.cali* in it. Unless a *glue* is provided in the parent zone stating the *IP address* of *ns1.duckburg.cali.* , this cannot be resolved.
 * **MX** (Mail exchanger)
-	* Routes mail more efficiently by pre-empting the destination of the sender to a hub (in most cases to the recipients host).
+	* Routes mail more efficiently by *pre-empting* the destination of the sender to a hub (in most cases to the recipients host).
 * **SPF** (Sender Policy Framework)
 	* Specifies what *hosts* / *IP's* are allowed to send email *from your domain* (*anti-spoofing*/junk mail)
 * **DKIM** (DomainKeys Identified Mail)
@@ -53,3 +53,9 @@ Log files can be found at */var/log/*
 # 2024-08-27
 ![[Pasted image 20250104115710.png]]
 
+[[Fråga 5#How syslog works]]
+[[Fråga 5#Infrastructure of syslog]] 
+* Includes *good* *qualities* 
+### Problems
+* No *authentication* features or *encryption*, so it's not very secure.
+* Uses *UDP*, could mean a potential *data* *loss* in high latency environments.
