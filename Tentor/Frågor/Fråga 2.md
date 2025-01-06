@@ -36,6 +36,10 @@ Related:
 	- Resolves the potential issue of defining wrong access for a user.
 
 The numbers are 3 *octagonals* 0-7 representing *read*, *write*, & *execute*
+
+"- - -"
+"4 2 1"
+
 * 0 = ---
 * 1 = --x
 * 2 = -w-
