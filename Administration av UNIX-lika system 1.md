@@ -967,3 +967,9 @@ Two numbers summarize memory usage:
 **fio: testing storage subsystem performance**
 (github.com/axboe/fio), 
 **sar: collecting and reporting statistics over time**
+
+
+
+
+
+![[Pasted image 20250106160943.png]]
