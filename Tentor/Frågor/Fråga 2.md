@@ -59,7 +59,6 @@ The numbers are 3 *octagonals* 0-7 representing *read*, *write*, & *execute* per
 * 5 = 101 = r-x
 * 6 = 110 = rw-
 * 7 = 111 = rwx
->>>>>>> origin/main
 
 **Umask** is an *inverted* permission mask for the ``chmod`` *octagonals*
  ``0 => 7 | 1 => 6 | 2 => 5 | 3 => 4 | 4 => 3 | 5 => 2 | 6 => 1 | 7 => 0``
