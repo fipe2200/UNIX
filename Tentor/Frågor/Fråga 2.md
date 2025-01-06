@@ -31,10 +31,11 @@ Related:
 	-  ``chmod 774 file`` Gives *user*/*group*/*other* rwx/rwx/r-- permissions.
 		- May be bad as it could sever access to processes you might not be aware of.
 - **Letters**: May define specific users access permission.
-	- ``chmod u+rwx file`` Gives user (owner) rwx permissions.
+	- ``chmod u+rwx file`` Gives *user* (*owner*) rwx permissions.
 		- **ugoa** - **u**ser, **g**roup, **o**ther, **a**ll
 	- Resolves the potential issue of defining wrong access for a user.
 
+<<<<<<< HEAD
 The numbers are 3 *octagonals* 0-7 representing *read*, *write*, & *execute*
 
 "- - -"
@@ -48,7 +49,19 @@ The numbers are 3 *octagonals* 0-7 representing *read*, *write*, & *execute*
 * 5 = r-x
 * 6 = rw-
 * 7 = rwx
+=======
+The numbers are 3 *octagonals* 0-7 representing *read*, *write*, & *execute* permissions.
+* 0 = 000 = ---
+* 1 = 001 = --x
+* 2 = 010 = -w-
+* 3 = 011 = -wx
+* 4 = 100 = r--
+* 5 = 101 = r-x
+* 6 = 110 = rw-
+* 7 = 111 = rwx
+>>>>>>> origin/main
 
-**Umask** is an *inverted* permission mask for ``chmod`` 
-* *Umask 022* = ``chmod 755`` 
-* *Umask 475* = ``chmod 302`` 
+**Umask** is an *inverted* permission mask for the ``chmod`` *octagonals*
+ ``0 => 7 | 1 => 6 | 2 => 5 | 3 => 4 | 4 => 3 | 5 => 2 | 6 => 1 | 7 => 0``
+* *Umask 022* => ``chmod 755`` => rwx|r-x|r-x
+* *Umask 475* => ``chmod 302`` => -wx|---|-w-
