@@ -35,7 +35,7 @@ Related:
 		- **ugoa** - **u**ser, **g**roup, **o**ther, **a**ll
 	- Resolves the potential issue of defining wrong access for a user.
 
-<<<<<<< HEAD
+
 The numbers are 3 *octagonals* 0-7 representing *read*, *write*, & *execute*
 
 "- - -"
@@ -49,7 +49,7 @@ The numbers are 3 *octagonals* 0-7 representing *read*, *write*, & *execute*
 * 5 = r-x
 * 6 = rw-
 * 7 = rwx
-=======
+
 The numbers are 3 *octagonals* 0-7 representing *read*, *write*, & *execute* permissions.
 * 0 = 000 = ---
 * 1 = 001 = --x
