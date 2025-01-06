@@ -1,14 +1,11 @@
 # 2024-01-08
 ![[Pasted image 20250104115556.png]]
 ### How to seamlessly transition users from an old server to a new server without downtime
-* ????????
-* **complete guess**: 
-	* Make a *backup* of your environment into the new server using ``rsync``
-	* Run it there to make sure everything works as intended
-	* Migrate users little by little as to not overwhelm the server.
-	* something something 
-#### (inte klar)
-
+* **guess**: 
+	* Make a *backup* of your environment into the new server using ``rsync``.
+	* Run it there to make sure everything works as intended.
+	* Migrate users one by one as to not overwhelm the server, using ``rsync``.
+#### (inte helt klar)
 
 ---
 # 2024-06-05
