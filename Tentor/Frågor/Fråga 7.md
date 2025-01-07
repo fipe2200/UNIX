@@ -1,6 +1,10 @@
 # 2024-01-08
 ![[Pasted image 20250104115830.png]]
 ### Resource records
+- **DNSKEYS** ( ZKS and KSK)
+	- INCLUDE *Private* and *public* keys in ZOA before signing.
+- **RRSIG** (Resource Record Identity Signature)
+	- Contains signature of other records in the zone.
 * **DS** (Delegation signer)
 	* Links together the *parent* and *child* zones in *DNSSEC*.
 	* Verifies the *DNSKEY* of the child to the *resolver*.
