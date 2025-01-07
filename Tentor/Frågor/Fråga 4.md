@@ -40,22 +40,25 @@
 # 2024-08-27
 ![[Pasted image 20250104115626.png]]
 - #### Följande 3 exempel är nog overkill för denna fråga, men det är bra att färska upp minnet om en specifik labb-fråga kommer istället.
-* **SAMBA** is best used to share files from *UNIX* to a *windows* computer. Although *FTP* and *NFS* **can** work, *samba* is *designed* to share between UNIX and windows, as windows uses the **SMB** **protocol** (*Server Message Block*) for file and printer network sharing, which a samba server also implements.
-- #Example 
+* ## **SAMBA**: 
+	is best used to share files from *UNIX* to a *windows* computer. Although *FTP* and *NFS* **can** work, *samba* is *designed* to share between UNIX and windows, as windows uses the **SMB** **protocol** (*Server Message Block*) for file and printer network sharing, which a samba server also implements.
+	#Example 
 	- In lab 3 we assigned *samba* *passwords* to the users that will access the share ``smbpasswd -a <user>`` then validated them ``smbpasswd -e user``.
 	- We defined the *share* *name*, *user* *access* and further *restrictions* to the server in the */etc/samba/smb.conf* configuration file.
 	- Then connect to the samba server ``smbclient //<server ip>/<name of share>``.
 
-- **FTP** is a protocol for sending files over a network, and is compatible over different filesystems.
+- ## **FTP**:
+	is a protocol for sending files over a network, and is compatible over different filesystems.
 	- Is best used for *big-* or *plain-file* transfers
 	- *Fast* and efficient.
-- #Example 
+  #Example 
 	- In lab 3 I used *vsftpd*, which uses the configuration file */etc/vsftpd* for user access.
 	- You connect *directly* to a server using ``ftp <serverip>``, and may use for instance ``put`` to *copy* a file from your working directory into the server directory, or ``get`` to download from the server.
 
-- **NFS** Is for *sharing* *filesystems* to different computers over networks, you *mount* a filesystem to a mountpoint making it accessible to navigate into.
+- ## **NFS**:
+	Is for *sharing* *filesystems* to different computers over networks, you *mount* a filesystem to a mountpoint making it accessible to navigate into.
 	- Useful when *groups* want to share the *same* *files*.
-- #Example 
+	#Example 
 	- For *nfs* you must define which filesystems to export in */etc/exports* 
 	- Both the *nfs* client and server run an *identity* *mapping* *daemon* to check that *UID*/*GID* are *congruent* over the different systems using the */etc/passwd* file, for *share access*.
 		- Mapping is configured in the */etc/ipmapd.con* file (*nfsv4*).
