@@ -13,7 +13,7 @@ Related:
 ![[Pasted image 20250104115813.png]]
 **SPF (Sender Policy Framework):**
 
-- *Purpose:
+*Purpose:
 - Prevent email spoofing by verifying the sender's email address.
 - *How it works:
 - The domain owner specifies authorized mail servers in a DNS record (SPF TXT record).
