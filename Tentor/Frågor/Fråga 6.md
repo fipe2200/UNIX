@@ -1,18 +1,18 @@
 # 2024-01-08
 ![[Pasted image 20250104115735.png]]
-Install MTA: Set up Postfix for sending emails.
+**Install MTA**: Set up Postfix for sending emails.
 
-Install MDA: Configure Dovecot for receiving emails.
+**Install MDA**: Configure Dovecot for receiving emails.
 
-Set up DNS records:
+**Set up DNS records**:
 - MX for mail server.
 - SPF, DKIM for email validation.
 
-Secure the server:
+**Secure the server**:
 - Use TLS for encryption.
 - Set up authentication (e.g., SASL).
 
-Test the server:
+**Test the server**:
 - Send and receive emails.
 - Check logs for errors.
 ---
