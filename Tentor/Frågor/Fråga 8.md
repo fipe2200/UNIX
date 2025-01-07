@@ -4,6 +4,11 @@
 ---
 # 2024-06-05
 ![[Pasted image 20250104115940.png]]
+* *Load averages* are the amount of *computational work* a system performs in different *time* *intervals*.
+	* It's useful to figure out if the *CPU* is working *over* its capacity *or* *not*.
+		* #Example If you have *performance* *issues*, if any load average number is *higher* than the amount of cores in your system, that means the *CPU* is working *over capacity*.
+			* If *higher* than core *amount*, investigate & possibly replace that hardware bottleneck.
+	* The 3 values are *1 minute*, *5 minute*, and *15 minute* time intervals of load averages, representing the % of *CPU* *capacity* in each interval.
 
 ---
 # 2024-08-27
@@ -13,4 +18,4 @@
 * #### Related info but not for this question
 * *ROM* (Read-only-memory)
 	* Is where firmware like *BIOS*/*UEFI* and the *GRUB* bootloader is stored and loaded first on boot (in our *VM's* they were typically stored in */dev/sda1* or *sda2*).
-		* After *GRUB* loads the kernel, the *kernel* may use *initrd* (using *ramdisk*) to load temporary files faster this way.
+		* After *GRUB* loads the kernel, the *kernel* may use ``initrd`` (using *ramdisk*) to load temporary files faster this way.
