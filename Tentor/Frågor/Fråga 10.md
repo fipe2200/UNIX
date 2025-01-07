@@ -10,7 +10,8 @@ I forgot to make sure the disks are *persistently* *mounted* on boot in the */et
 		* Can be configured from a plain text file *grub.cfg*.
 	* *Grub* also responsible for *assembling* *configurations* for the *kernel*.
 		* May also run a *grub* command line at boot time.
-		* #Example *-s* for *single user* mode instead of normal boot process.
+		* #Example 
+			* *-s* for *single user* mode instead of normal boot process.
 * **Kernel** 
 	* [[Fråga 3#What does the kernel do?]]
 	* [[Fråga 3#What can be found in the kernel space?]]
@@ -21,8 +22,10 @@ I forgot to make sure the disks are *persistently* *mounted* on boot in the */et
 		* *sh* is mainly used to run *sh* shell scripts efficiently.
 * **GUI** (Graphical User Interface)
 	* A *GUI* lets users interact with devices using graphical icons.
-	* #Example In lab 1, when we ran ``make menuconfig``, the *menu* we interface with is a *GUI*
-	* #Example The *Terminal* application is a shell *GUI*
+	* #Example 
+		* In lab 1, when we ran ``make menuconfig``, the *menu* we interface with is a *GUI*
+	* #Example 
+		* The *Terminal* application is a shell *GUI*
 
 ---
 # 2024-08-27

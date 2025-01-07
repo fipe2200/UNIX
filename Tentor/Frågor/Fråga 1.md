@@ -96,7 +96,7 @@ s = Socket file (data exchange through socket, opendkim.sock)
 	#Example 
 	Answer:
 	- Schedules a one-time task to restart the system at 01:00
-		```sudo restart | at 01:00```
+		```echo "sudo reboot" | at 01:00```
 	
 	More:
 	* Schedules a one-time task to echo “Backup complete” at 09:00
@@ -105,7 +105,7 @@ s = Socket file (data exchange through socket, opendkim.sock)
 	- Schedules a one-time task to echo “Backup complete” at 09:00
 		```echo "echo 'Backup complete'" | at 9am```
 		
-	- Schedules a one-time task to echo “Backup complete” at 09:00
+	- Schedules a one-time task to echo “Backup complete” at 26th of January, 2024.
 		```echo "echo 'Backup complete'" | at 012624```
 		
 
