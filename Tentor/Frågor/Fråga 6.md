@@ -1,16 +1,34 @@
 # 2024-01-08
 ![[Pasted image 20250104115735.png]]
+**Install MTA**: Set up Postfix for sending emails.
 
+**Install MDA**: Configure Dovecot for receiving emails.
+
+**Set up DNS records**:
+- MX for mail server.
+- SPF, DKIM for email validation.
+
+**Secure the server**:
+- Use TLS for encryption.
+- Set up authentication (e.g., SASL).
+
+**Test the server**:
+- Send and receive emails.
+- Check logs for errors.
 ---
 # 2024-06-05
 ![[Pasted image 20250104115757.png]]
+
+
+Related:
+[[Fråga 4#SAMBA]]
 
 ---
 # 2024-08-27
 ![[Pasted image 20250104115813.png]]
 **SPF (Sender Policy Framework):**
 
-- *Purpose:
+*Purpose:
 - Prevent email spoofing by verifying the sender's email address.
 - *How it works:
 - The domain owner specifies authorized mail servers in a DNS record (SPF TXT record).
