@@ -5,6 +5,7 @@
 	* Links together the *parent* and *child* zones in *DNSSEC*.
 	* Verifies the *DNSKEY* of the child to the *resolver*.
 		* *Chain of trust*
+### Chain of trust discussion
 * **Chain of trust**
 	* *verification* *process* in **DNSSEC**
 		* Public key of a child zone is *signed* by its parent zone
