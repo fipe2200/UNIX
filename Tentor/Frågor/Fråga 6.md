@@ -6,7 +6,7 @@ Install MDA: Configure Dovecot for receiving emails.
 
 Set up DNS records:
 - MX for mail server.
-- SPF, DKIM, and DMARC for email validation.
+- SPF, DKIM for email validation.
 
 Secure the server:
 - Use TLS for encryption.
