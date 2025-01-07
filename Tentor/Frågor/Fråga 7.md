@@ -1,6 +1,14 @@
 # 2024-01-08
 ![[Pasted image 20250104115830.png]]
-
+### Resource records
+* **DS** (Delegation signer)
+	* Links together the *parent* and *child* zones in *DNSSEC*.
+	* Verifies the *DNSKEY* of the child to the *resolver*.
+		* *Chain of trust*
+* **Chain of trust**
+	* *verification* *process* in **DNSSEC**
+		* Public key of a child zone is *signed* by its parent zone
+			* #Example We did this in our lab by signing our keys using ``dnssec-keygen`` & ``dnssec-signzone``, then two files *mcduckcorp.db.signed* and *dssec-mcduckcorp.duckburg.cali* were created. The *dssec* file contains the **DS** *RR* that must be placed / sent into the parent zone file (*duckburg.db*) to *verify* the *mcduckcorp* signature.
 ---
 # 2024-06-05
 ![[Pasted image 20250104115842.png]]
