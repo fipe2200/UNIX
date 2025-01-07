@@ -105,7 +105,7 @@ s = Socket file (data exchange through socket, opendkim.sock)
 	- Schedules a one-time task to echo “Backup complete” at 09:00
 		```echo "echo 'Backup complete'" | at 9am```
 		
-	- Schedules a one-time task to echo “Backup complete” at 09:00
+	- Schedules a one-time task to echo “Backup complete” at January 26th, 2024.
 		```echo "echo 'Backup complete'" | at 012624```
 		
 
