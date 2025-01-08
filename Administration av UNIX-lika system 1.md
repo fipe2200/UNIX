@@ -12,25 +12,81 @@
 	 - [x] Send in report by 29/12
  - [x]  [Lab 6](http://ver.miun.se/courses/DT149G/labs/lab_assgn6.pdf) Ch 27.6, 27.8, 16.10, also read [core concepts & building](https://docs.docker.com/build/concepts/overview/)
 	 - [x] Send in report by 5/01
-d
+
  [Study guide](http://ver.miun.se/courses/DT149G/Documents/studyguide.pdf)
 
 **Questions**: 
 * eth0 vs enp0s3
 * authoritative vs master server
 	* parent vs child (ns1?)  
+* *tentafråga*: migrate users to a new server with *no* downtime
+	* ``rsync``? 
+	* redirect (point) the new *DNS* 
+* lånedator
+* **upstart** 
+	* old
 ### Tentagenomgång
 Förstå tillämpning av labbarna
 * pros/cons
 * när saker används
 ## [Tentaplugg](https://elearn20.miun.se/moodle/pluginfile.php/1747159/mod_resource/content/2/DT149G_20210109.pdf)
+
+### Lärandemål
+• Knowledge on how to customize the kernel of your system.
+* **Steps to customize kernel**
+	* [[Fråga 2#2024-01-08|Steps to customize kernel]] 
+• Become familiar with process handling, priorities and scheduling.
+* **Process handling**
+	* [[Fråga 8#2024-06-05|load averages]], [[Fråga 9#2024-01-08|finding bottleneck/replace hardware]] 
+	* [[Fråga 9#2024-06-05|background/foreground]]
+* **Priorities**
+	* [[Fråga 9#2024-08-27|nice/renice]]
+* **Scheduling**
+	* [[Fråga 1#2024-08-27|at vs cron]] 
+• Knowledge how logging works in a UNIX-like system.
+* **Syslog**
+	* [[Fråga 5#2024-01-08|infrastructure/how it works/what it contains)]]
+	* [[Fråga 5#Problems|Problems with syslog]]
+• Become familiar with upstart, init and boot scripts.
+* **the upstart process**
+	* [[Administration av UNIX-lika system 1#Timeline of boot process|Timeline of boot process]]
+* **init**
+	* [[Administration av UNIX-lika system 1#ch 2.6 system management daemons|System management daemon]]
+* **Boot scripts** (*/etc/init.d*)
+	* syslog, udev, mount, ssh, Runlevels/target.
+		* #Example As we saw in lab 2(?), runlevel directories (*/etc/rc.*d*) are symlinked to */etc/init.d*. 
+			* The runlevel *dictate* which *boot scripts* to run.
+• Know how to administrate user accounts.
+* #Example ``sudo adduser <username>`` 
+	* prompts *user* *information* and *password* to assign (*enter* to skip).
+• Knowledge how to partition and format new hard drives for your system.
+* #Example Labb 3 
+• Be able to set up storage backup on your system.
+* 
+• Have the knowledge of setting up an IPTables firewall.
+• Be able to setup and administer docker containers.
+• Be able to correctly set up and administrate your own domain using
+BIND.
+• Have basic understanding of DNSSEC.
+• Have the knowledge to set up an SMTP server process.
+• Be able to set up the necessary security measures so that an email
+sent from your SMTP server will not be regarded as spam and
+cannot easily be used by spammers.
+• Know how to correctly set up your DNS to handle email and related
+mechanisms.
+• Be able to install and configure software for delivering emails using
+either POP3 or IMAP.
+• Have the knowledge of creating your own docker image.
+• Have a better insight into how containers can be created and used.
+
 - [Permissions](https://unix.stackexchange.com/questions/94212/chmod-by-letters-vs-numbers "https://unix.stackexchange.com/questions/94212/chmod-by-letters-vs-numbers")
 	- **Numbers**: Must define every permission (*user+group+other*: ``chmod 774 file``)
 	- **Letters**: Defines specific permission (*user*: ``chmod u+rwx file``)
 		- **ugoa** - user, group, other, all
 - **Scheduling**: Usable for backups, database maintenance, or nightly batch jobs
 	- ``at``: One time use command 
-		- *reboot at 02:00*: ``sudo reboot | at 2AM``  
+		- *reboot at 02:00*: ``echo "sudo reboot" | at 2AM``  
+			- #### must be ran in root shell (``sudo su``)
 	- ``cron``: Uses ``crontab`` for repeating tasks
 		- *Run an update on Monday at 01:30 every week of the year*: `30 1 * * MON /bin/update.sh` 
 - **fsck** checks the given filesystem(s) for issues and to make sure a fresh system works as intended (see lab 3)
@@ -44,7 +100,6 @@ Förstå tillämpning av labbarna
 			  ``cpio`` maintains hard links & more, better suited for backing up *filesystems*
 	* ``rsync`` is used to **synchronize** for example a source with a backup. If you have a backup of your home directory, ``rsync`` will only send the changes made in your home directory rather than the entire **/home** to the backup location. May also be used over networks with **ssh**.
 	* ``cp`` is used mainly for quick and small backups or transfers. It's fast but doesn't take into account environment such as links (?).
-
 
 ### A. Bushan (FTP) A file transfer protocol
 **Introduction**
@@ -201,25 +256,31 @@ Booting consists of
 All that continues while system is up
 
 ### ch 2.1 boot process overview 
-Systemd streamlines b process
-	Add dependency management 
-	Support concurring startups processes 
-	comprehensive logging
+*Systemd* streamlines boot process
+* Adds dependency management 
+* Support concurring startup processes 
+* Comprehensive logging
 today we use image management apis and ctrl panels
 During bootstrapping, kernel loads into memory and executes initialization tasks
-Timeline of boot process
-	Power on
-	Load bios from nvram
-	probe for HW
-	select boot device ( disk, network)
-	Identifies efi system partition 
-	Load boot loader (grub
-	Determine kernel to boot
-	Load kernel
-	Instantiate kernel data structures 
-	Start init/systemd as PID1
-	Execute startup scripts 
-	Running system
+#### Timeline of boot process
+* **Power on**
+* Load firmware (*BIOS*/*UEFI*) from *NVRAM*
+	* NVRAM = *Non-volatile RAM*, retains data without power (good for *firmware*)
+* Identify/probe for *hardware*
+	* #Example CPU, RAM, Storage, I/O devices, network interfaces
+* Select *boot device* (*disk*)
+* Identify *EFI* system partition
+	* Contains *GRUB*
+* Load boot loader (*GRUB*)
+* Determine *kernel* to boot
+* Load *kernel*
+* Instantiate *kernel data structures* 
+	* #Example Process table, page table, memory zones, inodes, and much more
+* Start *init*/*systemd* as *PID1*
+	* System & service *manager*, responsible for *booting* the system.
+* Execute startup scripts 
+	* System unit files (daemons, sockets, mounts,...)
+* **Running system**
 ### ch 2.2 system firmware 
 When power on, cpu hardwired to run boot code in ROM
 FIRMWARE knows about devices in the mobo
@@ -248,24 +309,24 @@ Default for linux
 	C in grub boot screen for cmd line to for ex. Edit config on boot time (temporary )
 	tab for cmds 
 ### ch 2.6 system management daemons
-Init
-	maintains mode of system 
-		Single user
+**Init**
+	Uses *sequential* scripts based on *runlevel*
+	maintains *mode* of system 
+		*Single user*
 			Minimal fs no services
-		Multiuser 
+		*Multiuser* 
 			All fs mounted, network services, window system and graphical login manager on console
-		Server
+		*Server*
 			Similar multiuser, no gui on console 
-	Starts and stops services as needed to bring system state in line with current active mode
-	.
-	init has startup chores it runs commands or scripts 
+	*Starts* and *stops* services as needed to bring system state in line with current active mode
+	*init* has startup chores it runs commands or scripts 
 
 Traditional init runs things in sequence, so later scripts won’t run until everything before it is finished
 
-Systemd formalizes init into unified theory of how things should be configured accessed and managed
+**Systemd** *formalizes* *init* into unified theory of how things should be configured, accessed, and managed
 	Robust dependency model
 	Manages targets, processes in parallel, network connections, kernel log entries, logins
-Critiqued for being overengineered but it’s very useful for admins 
+Critiqued for being *overengineered* but it’s very useful for admins 
 
 Init still useful for small installations that don’t need advanced process management 
 

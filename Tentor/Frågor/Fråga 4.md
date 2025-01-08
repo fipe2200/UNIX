@@ -4,7 +4,8 @@
 * **guess**: 
 	* Make a *backup* of your environment into the new server using ``rsync``.
 	* Run it there to make sure everything works as intended.
-	* Migrate users one by one as to not overwhelm the server, using ``rsync``.
+	* Redirect (point) the new *DNS* so that the old server stops being used.
+	* Pick a time or day with *low or any traffic* and ``rsync`` again for possible new changes.
 #### (inte helt klar)
 
 ---

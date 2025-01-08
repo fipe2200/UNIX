@@ -20,7 +20,9 @@
 * You have to make a *pointer* *record* (in the reverse zone file) for *each* IP address the organization has.
 * Each pointer *must* *match* a corresponding A record in the forward zone file (*mcduckcorp.db*).
 	* #Example If you have say 5 ip's spanning 10.4.1.1->10.4.1.5
-		* *1.1.4.10.in-addr.arpa* zone file must have a pointer for each of the 5 IP addresses in it.
+		* The *parent zone* should include a pointer for each address in the organization owns.
+		* *CNAME* redirects in the parent zone.
+			* Redirect multiple domain names to a single website.
 
 ---
 # 2024-08-27
