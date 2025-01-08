@@ -17,7 +17,7 @@
 ## **Crontab-File**:
 ```
 MIN HOUR DOM MON DOW CMD
-00 03 * * 2 CMD
+00 03 * * 3 CMD
 ```
 
 Related:
