@@ -95,7 +95,9 @@ s = Socket file (data exchange through socket, opendkim.sock)
 	
 	#Example 
 	Answer:
-	- Schedules a one-time task to restart the system at 01:00. Detta måste man göra som root-användare! 
+	- Schedules a one-time task to restart the system at 01:00. Detta måste man göra som root-användare! Detta genom:
+		```sudo su```
+		Sedan:
 		```echo "reboot" | at 01:00```
 	
 	More:
