@@ -62,7 +62,10 @@ Log files can be found at */var/log/*
 
 
 # 2018-01-16
+![[Pasted image 20250109134838.png]]
 
 # 2018-03-21
+![[Pasted image 20250109134900.png]]
 
 # 2018-10-30
+![[Pasted image 20250109134924.png]]
