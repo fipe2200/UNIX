@@ -28,7 +28,8 @@
 		* After *GRUB* loads the kernel, the *kernel* may use ``initrd`` (using *ramdisk*) to load temporary files faster this way.
 
 # 2018-01-16
-
+![[Pasted image 20250109134929.png]]
 # 2018-03-21
-
+![[Pasted image 20250109134945.png]]
 # 2018-10-30
+![[Pasted image 20250109135010.png]]
