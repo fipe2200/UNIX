@@ -59,3 +59,10 @@ Log files can be found at */var/log/*
 ### Problems
 * No *authentication* features or *encryption*, so it's not very secure.
 * Uses *UDP*, could mean a potential *data* *loss* in high latency environments.
+
+
+# 2018-01-16
+
+# 2018-03-21
+
+# 2018-10-30

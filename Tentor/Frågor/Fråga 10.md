@@ -38,3 +38,12 @@ I forgot to make sure the disks are *persistently* *mounted* on boot in the */et
 ### Suspending and later starting a process up again
 * After confirming the behaviour in unexpected, run ``kill -STOP`` to *suspend* the process. 
 * After addressing the issue, run ``kill -CONT`` to let the process *continue* executing again.
+
+
+
+
+# 2018-01-16
+
+# 2018-03-21
+
+# 2018-10-30

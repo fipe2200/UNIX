@@ -43,3 +43,10 @@ Related:
 - The sending server adds a digital signature to the email header using a private key.
 - The public key is published as a DNS TXT record.
 - The recipient server uses the public key to verify the signature and confirm the email has not been altered.
+
+
+# 2018-01-16
+
+# 2018-03-21
+
+# 2018-10-30
