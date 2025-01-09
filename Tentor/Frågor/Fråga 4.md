@@ -1,12 +1,11 @@
 # 2024-01-08
 ![[Pasted image 20250104115556.png]]
 ### How to seamlessly transition users from an old server to a new server without downtime
-* **guess**: 
-	* Make a *backup* of your environment into the new server using ``rsync``.
-	* Run it there to make sure everything works as intended.
-	* Redirect (point) the new *DNS* so that the old server stops being used.
-	* Pick a time or day with *low or any traffic* and ``rsync`` again for possible new changes.
-#### (inte helt klar)
+* Make a *backup* of your environment into the new server using ``rsync``.
+* Run it there to make sure everything works as intended.
+* Redirect (point) all traffic the new *DNS* so that the old server stops being used.
+* Pick a time or day with *low or any traffic* and ``rsync`` again for possible missed changes during the redirect.
+#LENNART_VERIFIED
 
 ---
 # 2024-06-05

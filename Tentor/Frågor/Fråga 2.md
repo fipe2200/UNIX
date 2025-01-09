@@ -45,8 +45,23 @@ The numbers are 3 *octagonals* 0-7 representing *read*, *write*, & *execute* per
 * 6 = 110 = rw-
 * 7 = 111 = rwx
 
-**Umask** is an *inverted* permission mask for the ``chmod`` *octagonals*
+**Umask** is an *inverted* permission *mask* for the ``chmod`` *octals*. Umask defines what permissions are *masked* or *disabled* upon creating a file/dir. 
  ``0 => 7 | 1 => 6 | 2 => 5 | 3 => 4 | 4 => 3 | 5 => 2 | 6 => 1 | 7 => 0``
+<<<<<<< HEAD
+* *UMASK=022* = "*nothing* is *disabled* for owner user (*0*), *write* is *disabled* for group & other users (*22*)" 
+	* *UMASK=022* => ``chmod 755`` => rwx|r-x|r-x
+* *UMASK=475* => "*read* *disabled* for owner user (*4*), *nothing* *disabled* for group (*7*), *read*/*execute* disabled for others"
+	* *UMASK=475* => ``chmod 302`` => -wx|---|-w-
+
+```
+Initial (0666)    rw- rw- rw-
+binary            110 110 110
+umask   (0022)    000 010 010
+-----------------------------
+final permission: 110 100 100
+				  rw- r-- r--
+```
+=======
 * *Umask 022* => ``chmod 755`` => rwx|r-x|r-x
 * *Umask 475* => ``chmod 302`` => -wx|---|-w-
 
@@ -58,3 +73,4 @@ The numbers are 3 *octagonals* 0-7 representing *read*, *write*, & *execute* per
 
 # 2018-10-30
 ![[Pasted image 20250109132244.png]]
+>>>>>>> origin/main
