@@ -48,7 +48,6 @@ Related: [[Administration av UNIX-lika system 1#ch 2.1 boot process overview]]
 # 2018-03-21
 ![[Pasted image 20250109134735.png]]
 
-Related:
-[[Fråga 9#2024-08-27]]
+Samma som [[Fråga 9#2024-08-27]]
 # 2018-10-30
 ![[Pasted image 20250109134815.png]]
