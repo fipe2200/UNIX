@@ -68,3 +68,13 @@
 		- Mapping is configured in the */etc/ipmapd.con* file (*nfsv4*).
 	- Then you *export* the shared filesystem using ``sudo exportfs -a``
 	- Finally you run ``sudo mount -t nfs -o nfsvers=4 <server ip>:/<shared dir> /mountpoint`` making the share freely accessible to whoever is permitted to enter the mountpoint.
+
+
+# 2018-01-16
+![[Pasted image 20250109134523.png]]
+
+# 2018-03-21
+![[Pasted image 20250109134701.png]]
+
+# 2018-10-30
+![[Pasted image 20250109134745.png]]

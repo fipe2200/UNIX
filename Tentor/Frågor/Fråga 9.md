@@ -41,3 +41,13 @@
 * ### Limitations: 
 	* To decrease the *niceness* of a process you need to be a *super user* (*sudo*), non-privileged users can only increase the *niceness*. A a new process inherits the priority of its parent. This is to *prevent* *low priority* processes from bearing *high priority* children. 
 		* If possible this could lead to other processes *starving* as processes could *unfairly* occupy the *CPU*. This is therefore limited to privileged users.
+
+
+# 2018-01-16
+![[Pasted image 20250109134841.png]]
+
+# 2018-03-21
+![[Pasted image 20250109134858.png]]
+
+# 2018-10-30
+![[Pasted image 20250109134911.png]]

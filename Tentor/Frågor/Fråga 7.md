@@ -36,3 +36,13 @@
 	- *Downsides*:
 		They can be fooled into allowing a harmful connection to the network.
 		An attacker could intercept a communication between two people to either spy on the traffic or make changes to it.
+
+
+# 2018-01-16
+![[Pasted image 20250109135040.png]]
+
+# 2018-03-21
+![[Pasted image 20250109135056.png]]
+
+# 2018-10-30
+![[Pasted image 20250109135112.png]]
