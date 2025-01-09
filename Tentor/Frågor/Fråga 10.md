@@ -48,5 +48,7 @@ I forgot to make sure the disks are *persistently* *mounted* on boot in the */et
 # 2018-03-21
 ![[Pasted image 20250109134735.png]]
 
+Related:
+[[Fråga 9#2024-08-27]]
 # 2018-10-30
 ![[Pasted image 20250109134815.png]]
