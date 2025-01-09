@@ -138,3 +138,15 @@ s = Socket file (data exchange through socket, opendkim.sock)
 
 	![[Pasted image 20250104140455.png]]
 
+
+# 2018-01-16
+![[Pasted image 20250109131905.png]]
+
+# 2018-10-30
+![[Pasted image 20250109131620.png]]
+
+# 2018-03-21
+![[Pasted image 20250109131820.png]]
+
+
+

@@ -49,3 +49,12 @@ The numbers are 3 *octagonals* 0-7 representing *read*, *write*, & *execute* per
  ``0 => 7 | 1 => 6 | 2 => 5 | 3 => 4 | 4 => 3 | 5 => 2 | 6 => 1 | 7 => 0``
 * *Umask 022* => ``chmod 755`` => rwx|r-x|r-x
 * *Umask 475* => ``chmod 302`` => -wx|---|-w-
+
+# 2018-01-16
+![[Pasted image 20250109132055.png]]
+
+# 2018-03-21
+![[Pasted image 20250109132143.png]]
+
+# 2018-10-30
+![[Pasted image 20250109132244.png]]
