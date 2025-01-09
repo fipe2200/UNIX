@@ -67,10 +67,10 @@ final permission: 110 100 100
 
 # 2018-01-16
 ![[Pasted image 20250109132055.png]]
-
+Samma som [[Fråga 4#2024-06-05]]
 # 2018-03-21
 ![[Pasted image 20250109132143.png]]
 
 # 2018-10-30
 ![[Pasted image 20250109132244.png]]
-
+Samma som [[Fråga 3#2024-06-05]]
