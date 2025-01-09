@@ -60,9 +60,13 @@ Förstå tillämpning av labbarna
 * #Example ``sudo adduser <username>`` 
 	* prompts *user* *information* and *password* to assign (*enter* to skip).
 • Knowledge how to partition and format new hard drives for your system.
-* #Example Labb 3 
+* #Example Labb 3
+	* 
+	* */etc/fstab*
 • Be able to set up storage backup on your system.
-* 
+* **Backups**
+	* [[Fråga 4#How to seamlessly transition users from an old server to a new server without downtime|safe rsync server migration]] 
+	* [[Administration av UNIX-lika system 1#Backups|cp vs. tar vs. cpio vs. rsync]]
 • Have the knowledge of setting up an IPTables firewall.
 • Be able to setup and administer docker containers.
 • Be able to correctly set up and administrate your own domain using
@@ -93,7 +97,7 @@ either POP3 or IMAP.
 - To best **share files with a windows** computer, **SAMBA** would be preferable. Although **ftp** and **nfs** _can_ work, SAMBA is designed to share between UNIX and windows as windows uses the SMB (Server Message Block) protocol for file and printer network sharing (check book for better wording). To set it up one must just install SAMBA, assign samba passwords to the user that will share, and ... (see lab)
 	- **FTP** Is best used for big or plain file transfers, you connect to a server and ``put``/``get`` directly to it.
 	- **NFS** Is for sharing filesystems, you mount a filesystem to a mountpoint making it accessible to navigate. 
-
+### Backups
 * **Backups** ``tar`` vs ``cpio`` vs ``cp`` vs ``rsync``
 	* Both ``tar`` and ``cpio`` archive many files to a *single* *stream*
 		* ``tar`` can read direct inputs while ``cpio`` needs a ``find`` operation
