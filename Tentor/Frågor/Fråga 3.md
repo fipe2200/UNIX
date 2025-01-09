@@ -66,3 +66,13 @@ Related:
 ## **chmod**
 
 ## **chown**
+
+
+# 2018-01-16
+![[Pasted image 20250109134153.png]]
+
+# 2018-03-21
+![[Pasted image 20250109134256.png]]
+
+# 2018-10-30
+![[Pasted image 20250109134327.png]]
