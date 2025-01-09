@@ -82,3 +82,4 @@ drwxrwx--- root backup_write /backup/write
 
 # 2018-10-30
 ![[Pasted image 20250109134745.png]]
+Samma som [[Fråga 4#2024-08-27]]
