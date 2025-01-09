@@ -44,7 +44,7 @@ I forgot to make sure the disks are *persistently* *mounted* on boot in the */et
 
 # 2018-01-16
 ![[Pasted image 20250109134704.png]]
-
+Related: [[Administration av UNIX-lika system 1#ch 2.1 boot process overview]]
 # 2018-03-21
 ![[Pasted image 20250109134735.png]]
 
