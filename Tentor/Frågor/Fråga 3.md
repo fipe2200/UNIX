@@ -70,9 +70,10 @@ Related:
 
 # 2018-01-16
 ![[Pasted image 20250109134153.png]]
-
+Samma som [[Fråga 2#2024-08-27]]
 # 2018-03-21
 ![[Pasted image 20250109134256.png]]
-
+Samma som [[Fråga 9#2024-06-05]]
 # 2018-10-30
 ![[Pasted image 20250109134327.png]]
+Samma som [[Fråga 1#2024-06-05]]

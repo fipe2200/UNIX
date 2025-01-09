@@ -72,9 +72,14 @@
 
 # 2018-01-16
 ![[Pasted image 20250109134523.png]]
-
+Samma som [[Fråga 1#2024-08-27]]
 # 2018-03-21
 ![[Pasted image 20250109134701.png]]
+```
+drwxr-x--- root backup_read /backup 
+drwxrwx--- root backup_write /backup/write
+```
 
 # 2018-10-30
 ![[Pasted image 20250109134745.png]]
+Samma som [[Fråga 4#2024-08-27]]

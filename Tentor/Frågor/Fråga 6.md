@@ -47,7 +47,7 @@ Related:
 
 # 2018-01-16
 ![[Pasted image 20250109135004.png]]
-
+Samma som [[Fråga 5#2024-01-08]]
 # 2018-03-21
 ![[Pasted image 20250109135023.png]]
 

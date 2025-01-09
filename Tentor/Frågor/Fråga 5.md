@@ -63,9 +63,10 @@ Log files can be found at */var/log/*
 
 # 2018-01-16
 ![[Pasted image 20250109134838.png]]
-
+Samma som [[Fråga 6#2024-08-27]]
 # 2018-03-21
 ![[Pasted image 20250109134900.png]]
-
+Samma som [[Fråga 6#2024-01-08]]
 # 2018-10-30
 ![[Pasted image 20250109134924.png]]
+Samma som [[Fråga 7#2024-06-05]]
