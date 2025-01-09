@@ -43,6 +43,7 @@
 
 # 2018-03-21
 ![[Pasted image 20250109135056.png]]
-
+Samma som [[Fråga 7#2024-01-08]]
 # 2018-10-30
 ![[Pasted image 20250109135112.png]]
+Samma som [[Fråga 6#2024-01-08]]
