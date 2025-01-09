@@ -29,7 +29,10 @@
 
 # 2018-01-16
 ![[Pasted image 20250109134929.png]]
+Samma som [[Fråga 8#2024-06-05]]
 # 2018-03-21
 ![[Pasted image 20250109134945.png]]
+
 # 2018-10-30
 ![[Pasted image 20250109135010.png]]
+Samma som [[Fråga 9#2024-06-05]]
