@@ -147,6 +147,10 @@ s = Socket file (data exchange through socket, opendkim.sock)
 
 # 2018-03-21
 ![[Pasted image 20250109131820.png]]
-
-
-
+### How to check this?
+* ``stat <file>`` or ``find`` using ``-mtime``, ``-ctime``, ``-atime``
+### Differences
+* *Modification time* is when the file *content* was last modified.
+* *Access time* is when the file was *last read*.
+* *Change time* is when the file *metadata* (name, ownership, permissions) was last changed.
+	* *meta-information* such as Inode, Blocks, file type, Size, creation date, device.
