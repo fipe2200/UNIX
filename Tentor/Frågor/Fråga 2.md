@@ -73,4 +73,4 @@ final permission: 110 100 100
 
 # 2018-10-30
 ![[Pasted image 20250109132244.png]]
->>>>>>> origin/main
+
