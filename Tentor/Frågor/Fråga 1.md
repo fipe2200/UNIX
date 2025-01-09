@@ -141,10 +141,10 @@ s = Socket file (data exchange through socket, opendkim.sock)
 
 # 2018-01-16
 ![[Pasted image 20250109131905.png]]
-Samma som fråga 3 2024-08-27 
+Samma som [[fråga 3#2024-08-27]] 
 # 2018-10-30
 ![[Pasted image 20250109131620.png]]
-Samma som fråga 2 2024-01-08
+Samma som [[Fråga 2#2024-01-08]]
 # 2018-03-21
 ![[Pasted image 20250109131820.png]]
 
