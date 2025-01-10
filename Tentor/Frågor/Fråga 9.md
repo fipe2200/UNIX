@@ -48,23 +48,7 @@
 The `/etc/skel` directory in Linux serves as a "template" directory for creating the home directories of new user accounts. It contains default configuration files and directories that are copied automatically to a new user's home directory when the user is created with tools like `useradd` or `adduser`.
 # 2018-03-21
 ![[Pasted image 20250109134858.png]]
-**Use `top` or `htop`:**
-
-- Run `top` or `htop` to identify processes consuming significant CPU or memory.
-    - Look under the `%CPU` or `%MEM` columns.
-    - Note the **PID** (Process ID) of the offending process.
-    
-**Send the `STOP` signal to the process:**
-
-- Use the `kill` command with the `-STOP` signal to pause (suspend) the process without terminating it:
-
-    `kill -STOP <PID>`
-
-**Send the `CONT` signal to resume:**
-
-- Use the `kill` command with the `-CONT` signal to resume the process:
-    
-    `kill -CONT <PID>`
+Samma som [[Fråga 10#2024-08-27]]
 # 2018-10-30
 ![[Pasted image 20250109134911.png]]
 Samma som [[Fråga 8#2024-08-27]]
