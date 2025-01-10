@@ -26,7 +26,7 @@ Related:
 ---
 # 2024-08-27
 ![[Pasted image 20250104115441.png]]
-
+#Svar
 - **Numbers**: Must define every user access permission.
 	-  ``chmod 774 file`` Gives *user*/*group*/*other* rwx/rwx/r-- permissions.
 		- May be bad as it could sever access to processes you might not be aware of.
@@ -34,7 +34,7 @@ Related:
 	- ``chmod u+rwx file`` Gives *user* (*owner*) rwx permissions.
 		- **ugoa** - **u**ser, **g**roup, **o**ther, **a**ll
 	- Resolves the potential issue of defining wrong access for a user.
-
+#### Bra å veta
 The numbers are 3 *octals* 0-7 representing *read*, *write*, & *execute* permissions.
 * 0 = 000 = ---
 * 1 = 001 = --x
@@ -44,8 +44,9 @@ The numbers are 3 *octals* 0-7 representing *read*, *write*, & *execute* permiss
 * 5 = 101 = r-x
 * 6 = 110 = rw-
 * 7 = 111 = rwx
-
-**Umask** is an *inverted* permission *mask* for the ``chmod`` *octals*. Umask defines what permissions are *masked* or *disabled* upon creating a file/dir. 
+#### Umask info 
+* ***Umask** is an *inverted* permission *mask* for the ``chmod`` *octals*. Umask defines what permissions are *masked* or *disabled* upon creating a file/dir.
+* May also be ran as a *command*, e.g. ``umask 0022`` to mask the terminal process ("any file created in this terminal has mask 0022").
  ``0 => 7 | 1 => 6 | 2 => 5 | 3 => 4 | 4 => 3 | 5 => 2 | 6 => 1 | 7 => 0``
 
 * *UMASK=022* = "*nothing* is *disabled* for owner user (*0*), *write* is *disabled* for group & other users (*22*)" 
