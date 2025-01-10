@@ -45,7 +45,7 @@
 
 # 2018-01-16
 ![[Pasted image 20250109134841.png]]
-
+The `/etc/skel` directory in Linux serves as a "template" directory for creating the home directories of new user accounts. It contains default configuration files and directories that are copied automatically to a new user's home directory when the user is created with tools like `useradd` or `adduser`.
 # 2018-03-21
 ![[Pasted image 20250109134858.png]]
 
