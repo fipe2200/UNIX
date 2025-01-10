@@ -29,13 +29,11 @@
 Förstå tillämpning av labbarna
 * pros/cons
 * när saker används
-## [Tentaplugg](https://elearn20.miun.se/moodle/pluginfile.php/1747159/mod_resource/content/2/DT149G_20210109.pdf)
-
-### Lärandemål
-• Knowledge on how to customize the kernel of your system.
+# Lärandemål
+#### Knowledge on how to customize the kernel of your system.
 * **Steps to customize kernel**
 	* [[Fråga 2#2024-01-08|Steps to customize kernel]] 
-• Become familiar with process handling, priorities and scheduling.
+#### Become familiar with process handling, priorities and scheduling.
 * **Process handling**
 	* [[Fråga 8#2024-06-05|load averages]], [[Fråga 9#2024-01-08|finding bottleneck/replace hardware]] 
 	* [[Fråga 9#2024-06-05|background/foreground]]
@@ -43,11 +41,11 @@ Förstå tillämpning av labbarna
 	* [[Fråga 9#2024-08-27|nice/renice]]
 * **Scheduling**
 	* [[Fråga 1#2024-08-27|at vs cron]] 
-• Knowledge how logging works in a UNIX-like system.
+#### Knowledge how logging works in a UNIX-like system.
 * **Syslog**
 	* [[Fråga 5#2024-01-08|infrastructure/how it works/what it contains)]]
 	* [[Fråga 5#Problems|Problems with syslog]]
-• Become familiar with upstart, init and boot scripts.
+#### Become familiar with upstart, init and boot scripts.
 * **the upstart process**
 	* [[Administration av UNIX-lika system 1#Timeline of boot process|Timeline of boot process]]
 * **init**
@@ -56,32 +54,88 @@ Förstå tillämpning av labbarna
 	* syslog, udev, mount, ssh, Runlevels/target.
 		* #Example As we saw in lab 2(?), runlevel directories (*/etc/rc.*d*) are symlinked to */etc/init.d*. 
 			* The runlevel *dictate* which *boot scripts* to run.
-• Know how to administrate user accounts.
+#### Know how to administrate user accounts.
 * #Example ``sudo adduser <username>`` 
 	* prompts *user* *information* and *password* to assign (*enter* to skip).
-• Knowledge how to partition and format new hard drives for your system.
-* #Example Labb 3
-	* 
-	* [[Fråga 10#2024-01-08|fstab]]
-• Be able to set up storage backup on your system.
+#### Knowledge how to partition and format new hard drives for your system.
+* #Example **Labb 3**
+	* ``sudo fdisk /dev/sdb`` - Creates partition.
+		* ``<enter>`` For default options (*full* unpartitioned space), finish with ``w`` to write.
+	* ``sudo fdisk -l`` - Check partition creation / its name.
+	* ``sudo mkfs -t ext4 /dev/sdb1`` - Create filesystem in partition. 
+	* ``sudo mount /dev/sdb1 /mountpoint`` - Mount partition.
+	* [[Fråga 10#2024-01-08|fstab]] - Keep mount after reboot
+#### Be able to set up storage backup on your system.
 * **Backups**
 	* [[Fråga 4#How to seamlessly transition users from an old server to a new server without downtime|safe rsync server migration]] 
 	* [[Administration av UNIX-lika system 1#Backups|cp vs. tar vs. cpio vs. rsync]]
-• Have the knowledge of setting up an IPTables firewall.
-• Be able to setup and administer docker containers.
-• Be able to correctly set up and administrate your own domain using
-BIND.
-• Have basic understanding of DNSSEC.
-• Have the knowledge to set up an SMTP server process.
-• Be able to set up the necessary security measures so that an email
-sent from your SMTP server will not be regarded as spam and
-cannot easily be used by spammers.
-• Know how to correctly set up your DNS to handle email and related
-mechanisms.
-• Be able to install and configure software for delivering emails using
-either POP3 or IMAP.
-• Have the knowledge of creating your own docker image.
-• Have a better insight into how containers can be created and used.
+#### Have the knowledge of setting up an IPTables firewall.
+* #Example ``sudo iptables -P INPUT -j DROP``
+	* "Drop *all* incoming packets"
+* #Example ``sudo iptables -A INPUT -p tcp --dport 20 -j ACCEPT``
+	* "Accept all *incoming* *TCP* packets from port *20*"
+* #Example ``sudo iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT``
+	* "*Stateful packet filtering* on all incoming packets" (paired with ``OUTPUT`` equivalent)
+		* "Only allow traffic from *established* connections", *records* ongoing traffic information.
+	* **Flags**
+		* *-A* append to chain, *-p* protocol, *--dport* destination port, *-j* target.
+		* *-F* flush prior rules, *-i* interface (enp0s3), *-s* source IP.
+		* *-P* set default policy, *-d* destination IP, *-m* module.
+#### Be able to setup and administer docker containers.
+* [[Fråga 1#2024-01-08|container (docker) info]]
+* **Setup** 
+	* Make necessary docker *folder hierarchy* for your needs (e.g., *mountpoints*).
+	* ``sudo docker network create -d bridge --subnet <10.x.x.0/28> <name>`` Create docker *network*.
+	* ``sudo docker build -t <name>:image .`` - Build a docker *image*.
+		* Use a *Dockerfile* for necessary *installs*.
+	* ``sudo docker run.sh`` - Run *instance* of the docker image (easier to read with *script*).
+		* Script include *name*, *IP*, *network*, *time zone*, *docker image*.
+			* If using *mountpoints*, add storage space for the mounts (*-v*).
+* **Administration**
+	* ``docker ps`` ``docker network inspect`` ``docker rm <name>`` ``docker images`` ``docker logs -f <name>`` ``docker start|stop <name>`` ``docker exec -t <name> bash`` 
+#### Be able to correctly set up and administrate your own domain using BIND.
+* [[Administration av UNIX-lika system 1#Be able to setup and administer docker containers.|setup & administer docker containers]]
+* Create a *bind* user in host system.
+* Make necessary *folder hierarchy* & *mountpoints*/*symlinks*.
+* Include *named.conf* files to configure server *type* & *zone*.
+* Create zone file with *SOA* record (*domain.db*).
+	* Add *glue record* (*name server* + *A* record)
+* Build ubuntu:bind9 *docker image*. 
+* Run the docker script.
+#### Have basic understanding of DNSSEC.
+* [[Fråga 7#2024-01-08|DNSSEC records, setup & chain of trust]]
+* [[Fråga 5#Resource records (RR)|All Resource records]]
+#### Have the knowledge to set up an SMTP server process.
+* **Postfix** (Mail Transfer Agent) - routes and delivers mail.
+	* *main.cf* (Config file) - Enable support for *TLS*, *SPF*, access to *DKIM* *socket*.
+		* Add *restrictions* to recipients under *smtpd_recipient_restrictions*
+		* ``sudo postconf -e 'home_mailbox = maildir/'`` - Designate the user home mailbox.
+		* *master.cf* (Config file) - Define the service using the *SPF* tool.
+#### Be able to set up the necessary security measures so that an email sent from your SMTP server will not be regarded as spam and cannot easily be used by spammers.
+* **SPF** - ([[Fråga 6#2024-08-27|purpose]])
+	* Install python compliant policy & configure into */etc/postfix/main.cf*
+* **Opendkim** - ([[Fråga 6#2024-08-27|purpose]])
+	* */etc/opendkim.conf* 
+		* Define *selector*, *keyfile*, *domain*, and *socket* configurations.
+		* Generate key for *dkim-milter* (mail-filter).
+#### Know how to correctly set up your DNS to handle email and related mechanisms.
+* [[Fråga 5#Resource records (RR)|All resource records]]
+* [[Fråga 6#2024-01-08|email server steps]]
+#### Be able to install and configure software for delivering emails using either POP3 or IMAP.
+* **AA** (Access Agents)
+	* *Dovecot* - [[Fråga 6#2024-01-08|MDA]]
+		* We didn't really configure it much, just added *POP3* & *IMAP* iptables ports 110 & 143 (*normal connections*), and port 993 & 995 (*TLS*).
+		* *TLS* is already configured in dovecot, just make sure it works with:
+			* ``openssl s_client -connect <mail dns>:<TLS port>`` 
+#### Have the knowledge of creating your own docker image.
+* **Creating a docker image** using *Launch script*, *Dockerfile*, & *Run script*
+	* *Launch script*: Contains *permissions* for new files/directories, basically any additions you want made as the docker starts.
+	* *Dockerfile*: ``FROM: <image>``, ``COPY <Launch script>``, ``RUN <programs to install>``, ``CMD <Launch.sh location>`` 
+	* *Run script*: Contains the full ``docker run`` command, including options and attributes like *-d* (daemon), *-v* (volume space), *name*, *IP*, *network*, *time zone*, and *docker image*.
+#### Have a better insight into how containers can be created and used.
+* [[#Be able to setup and administer docker containers.|setup & administer & general docker info]]
+* [[#Be able to correctly set up and administrate your own domain using BIND.|Using bind]]
+
 
 - [Permissions](https://unix.stackexchange.com/questions/94212/chmod-by-letters-vs-numbers "https://unix.stackexchange.com/questions/94212/chmod-by-letters-vs-numbers")
 	- **Numbers**: Must define every permission (*user+group+other*: ``chmod 774 file``)

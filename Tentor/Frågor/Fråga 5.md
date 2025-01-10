@@ -21,7 +21,7 @@ Log files can be found at */var/log/*
 * **NS** (name server) 
 	* Identifies the *authoritative* *servers* for a zone and delegate *subdomains*.
 * **A** (Address)
-	* Maps hostnames to IP addresses
+	* Maps hostnames to IP addresses.
 * **GLUE**
 	* Consists of a *NS* record for the main domain and an *A* record for it.
 	* A *glue* record is required to avoid circular referencing in a dependency structure.
