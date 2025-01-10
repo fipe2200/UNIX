@@ -34,7 +34,7 @@ I forgot to make sure the disks are *persistently* *mounted* on boot in the */et
 * Run ``top`` and look for *high* CPU utilization.
 * When running ``top``, press *f* and navigate to the *DATA* column & press *space bar*. Look for *unexpected* growth over time & absolute size.
 * Run ``uptime`` for *unexpectedly* *high* or *spiking* load averages.
-	* Load averages should be less than the total amount of *cores*.
+	* Load averages should be less than the total amount of *cores* in the CPU.
 ### Suspending and later starting a process up again
 * After confirming the behaviour in unexpected, run ``kill -STOP`` to *suspend* the process. 
 * After addressing the issue, run ``kill -CONT`` to let the process *continue* executing again.

@@ -62,7 +62,7 @@ Förstå tillämpning av labbarna
 • Knowledge how to partition and format new hard drives for your system.
 * #Example Labb 3
 	* 
-	* */etc/fstab*
+	* [[Fråga 10#2024-01-08|fstab]]
 • Be able to set up storage backup on your system.
 * **Backups**
 	* [[Fråga 4#How to seamlessly transition users from an old server to a new server without downtime|safe rsync server migration]] 
