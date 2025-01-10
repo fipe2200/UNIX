@@ -12,8 +12,9 @@
 ### Chain of trust discussion
 * **Chain of trust**
 	* *verification* *process* in **DNSSEC**
-		* Public key of a child zone is *signed* by its parent zone
-			* #Example We did this in our lab by signing our keys using ``dnssec-keygen`` & ``dnssec-signzone``, then two files *mcduckcorp.db.signed* and *dssec-mcduckcorp.duckburg.cali* were created. The *dssec* file contains the **DS** *RR* that must be placed / sent into the parent zone file (*duckburg.db*) to *verify* the *mcduckcorp* signature.
+		* The public key of a child zone is *signed* by its parent zone, this is to *ensure* DNS responses are *verified* by the resolvers queries at every level from root -> domain 
+			* prevents *DNS* *spoofing*.
+		* #Example We did this in our lab by signing our keys using ``dnssec-keygen`` & ``dnssec-signzone``, then two files *mcduckcorp.db.signed* and *dssec-mcduckcorp.duckburg.cali* were created. The *dssec* file contains the **DS** *RR* that must be placed / sent into the parent zone file (*duckburg.db*) to *verify* the *mcduckcorp* signature.
 ---
 # 2024-06-05
 ![[Pasted image 20250104115842.png]]
