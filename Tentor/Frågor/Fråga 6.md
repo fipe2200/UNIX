@@ -19,7 +19,6 @@
 # 2024-06-05
 ![[Pasted image 20250104115757.png]]
 
-
 Related:
 [[Fråga 4#SAMBA]]
 
@@ -61,3 +60,4 @@ Samma som [[Fråga 5#2024-01-08]]
 - Application-layer attacks (e.g., SQL injection).
 # 2018-10-30
 ![[Pasted image 20250109135052.png]]
+![[Pasted image 20250110112715.png]]
