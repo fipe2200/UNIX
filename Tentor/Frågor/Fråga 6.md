@@ -50,6 +50,14 @@ Related:
 Samma som [[Fråga 5#2024-01-08]]
 # 2018-03-21
 ![[Pasted image 20250109135023.png]]
+**Types of attacks firewalls can prevent:
+- Unauthorized access (e.g., blocking suspicious IP addresses).
+- DDoS (to some extent, via rate-limiting rules).
+- Port scanning and brute force attacks (e.g., restricting access to ports).
 
+**Types of attacks firewalls can't detect:
+- Internal threats from authenticated users.
+- Encrypted malicious traffic (e.g., malware in HTTPS traffic).
+- Application-layer attacks (e.g., SQL injection).
 # 2018-10-30
 ![[Pasted image 20250109135052.png]]
