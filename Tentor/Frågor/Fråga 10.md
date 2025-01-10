@@ -50,3 +50,8 @@ Related: [[Administration av UNIX-lika system 1#ch 2.1 boot process overview]]
 Samma som [[Fråga 9#2024-08-27]]
 # 2018-10-30
 ![[Pasted image 20250109134815.png]]
+**When changing runlevels:
+- **Unnecessary services** are stopped.
+- **Required services** for the new runlevel are started.
+- The system’s overall kernel state remains unchanged.
+- The process ensures the system transitions smoothly to the desired operational mode.
