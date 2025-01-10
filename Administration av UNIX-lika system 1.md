@@ -151,6 +151,9 @@ Förstå tillämpning av labbarna
 - To best **share files with a windows** computer, **SAMBA** would be preferable. Although **ftp** and **nfs** _can_ work, SAMBA is designed to share between UNIX and windows as windows uses the SMB (Server Message Block) protocol for file and printer network sharing (check book for better wording). To set it up one must just install SAMBA, assign samba passwords to the user that will share, and ... (see lab)
 	- **FTP** Is best used for big or plain file transfers, you connect to a server and ``put``/``get`` directly to it.
 	- **NFS** Is for sharing filesystems, you mount a filesystem to a mountpoint making it accessible to navigate. 
+
+
+
 ### Backups
 * **Backups** ``tar`` vs ``cpio`` vs ``cp`` vs ``rsync``
 	* Both ``tar`` and ``cpio`` archive many files to a *single* *stream*
