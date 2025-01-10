@@ -46,7 +46,7 @@ Förstå tillämpning av labbarna
 	* [[Fråga 5#2024-01-08|infrastructure/how it works/what it contains)]]
 	* [[Fråga 5#Problems|Problems with syslog]]
 #### Become familiar with upstart, init and boot scripts.
-* **the upstart process**
+* **The upstart process**
 	* [[Administration av UNIX-lika system 1#Timeline of boot process|Timeline of boot process]]
 * **init**
 	* [[Administration av UNIX-lika system 1#ch 2.6 system management daemons|System management daemon]]
@@ -55,8 +55,15 @@ Förstå tillämpning av labbarna
 		* #Example As we saw in lab 2(?), runlevel directories (*/etc/rc.*d*) are symlinked to */etc/init.d*. 
 			* The runlevel *dictate* which *boot scripts* to run.
 #### Know how to administrate user accounts.
-* #Example ``sudo adduser <username>`` 
-	* prompts *user* *information* and *password* to assign (*enter* to skip).
+* ``sudo adduser <username>`` - Create user, enter *user* *information* and *password* (*enter* to skip).
+* ``sudo addgroup <groupname>`` - Create a group.
+* ``sudo adduser <username> <groupname>`` - Add user to group.
+* ``sudo passwd <username>`` - Set password for existing user.
+* ``id <username>`` - User details (*UID*, *GID*).
+* ``groups <username>`` - Quick group details (*group names*) .
+* ``/etc/passwd`` - Contains user information.
+* ``su <user>`` - Log into user (*terminal*).
+	* ``exit`` - Log out of user (*terminal*).
 #### Knowledge how to partition and format new hard drives for your system.
 * #Example **Labb 3**
 	* ``sudo fdisk /dev/sdb`` - Creates partition.
