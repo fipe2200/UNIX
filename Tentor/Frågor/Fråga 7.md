@@ -41,7 +41,17 @@
 
 # 2018-01-16
 ![[Pasted image 20250109135040.png]]
-
+Here’s how the components interact in an email's lifecycle:
+1. **Sending an Email:**
+    
+    - The **UA** (e.g., Gmail client) sends the email to an **MTA** using SMTP.
+    - The **MTA** routes the email to the recipient’s MTA based on the recipient’s domain.
+2. **Delivery:**
+    
+    - The recipient’s **MTA** hands off the email to the **MDA** for storage in the recipient’s mailbox.
+3. **Access:**
+    
+    - The recipient’s **UA** connects to the **AA** (via IMAP, POP3, or a web interface) to retrieve the email from the **MDA**.
 # 2018-03-21
 ![[Pasted image 20250109135056.png]]
 Samma som [[Fråga 7#2024-01-08]]
