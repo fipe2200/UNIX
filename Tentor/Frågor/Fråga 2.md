@@ -71,6 +71,15 @@ Samma som [[Fråga 4#2024-06-05]]
 # 2018-03-21
 ![[Pasted image 20250109132143.png]]
 
+**Advantages:
+- Optimized for specific hardware.
+- Reduces bloat by removing unused drivers and features.
+- Improved performance for specific tasks.
+
+**Drawbacks:
+- Time-consuming to configure, compile, and test.
+- Risk of introducing errors or incompatibility.
+- Difficult to maintain compared to using pre-built distribution kernels.
 # 2018-10-30
 ![[Pasted image 20250109132244.png]]
 Samma som [[Fråga 3#2024-06-05]]
