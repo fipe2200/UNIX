@@ -1,7 +1,7 @@
 # 2024-01-08
 ![[Pasted image 20250104115928.png]]
 ### Manual boot from GRUB
-* Enter the *GRUB* boot menu by either configuring *grub.cfg* first or hold *Esc* key during boot.
+* Enter the *GRUB* boot menu by either configuring *grub.cfg* first or hold *Esc* / *shift* key during boot.
 * Press "*c*" to enter *GRUB* command line while in the *GRUB* menu.
 * Select the *root* *partition*
 * Select & load *kernel* 

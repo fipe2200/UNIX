@@ -57,6 +57,7 @@ The numbers are 3 *octals* 0-7 representing *read*, *write*, & *execute* permiss
 	* *UMASK=475* => ``chmod 302`` => -wx|---|-w-
 #### Tydlig uträkning:
 ```
+(remove permission for every AND)
 Initial (0666)    rw- rw- rw-
 binary            110 110 110
 umask   (0022)    000 010 010
@@ -64,6 +65,16 @@ umask   (0022)    000 010 010
 final permission: 110 100 100
 				  rw- r-- r--
 ```
+#### A umask can't add bits:
+```
+Initial (0660)    rw- rw- ---
+binary            110 110 000
+umask   (0027)    000 010 111
+-----------------------------
+final permission: 110 100 000
+				  rw- r-- r--
+```
+* This means the umask 002*7* doesn't do anything here.
 
 # 2018-01-16
 ![[Pasted image 20250109132055.png]]

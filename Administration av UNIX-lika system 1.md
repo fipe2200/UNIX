@@ -332,7 +332,7 @@ During bootstrapping, kernel loads into memory and executes initialization tasks
 * Identify/probe for *hardware*
 	* #Example CPU, RAM, Storage, I/O devices, network interfaces
 * Select *boot device* (*disk*)
-* Identify *EFI* system partition
+* Identify *EFI* system pfartition
 	* Contains *GRUB*
 * Load boot loader (*GRUB*)
 * Determine *kernel* to boot
