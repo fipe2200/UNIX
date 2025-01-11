@@ -16,15 +16,6 @@
  [Study guide](http://ver.miun.se/courses/DT149G/Documents/studyguide.pdf)
 
 **Questions**: 
-* eth0 vs enp0s3
-* authoritative vs master server
-	* parent vs child (ns1?)  
-* *tentafråga*: migrate users to a new server with *no* downtime
-	* ``rsync``? 
-	* redirect (point) the new *DNS* 
-* lånedator
-* **upstart** 
-	* old
 ### Tentagenomgång
 Förstå tillämpning av labbarna
 * pros/cons
@@ -33,6 +24,10 @@ Förstå tillämpning av labbarna
 #### Knowledge on how to customize the kernel of your system.
 * **Steps to customize kernel**
 	* [[Fråga 2#2024-01-08|Steps to customize kernel]] 
+* **Load driver module vs build into kernel** (**Pro vs. con**)
+	* [[Fråga 4#2024-06-05|Load vs build modules into kernel]]
+* **What the kernel does** 
+	* [[Fråga 3#What does the kernel do?|Kernels function & what can be found in it]] 
 #### Become familiar with process handling, priorities and scheduling.
 * **Process handling**
 	* [[Fråga 8#2024-06-05|load averages]], [[Fråga 9#2024-01-08|finding bottleneck/replace hardware]] 

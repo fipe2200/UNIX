@@ -4,6 +4,8 @@
 
 1. ``sudo apt install <necessary packages>`` Installs essential tools to build the kernel.
 2. ``wget <link to kernel.org kernel>`` Downloads a stable kernel from kernel.org.
+	1. ``tar -xzf <kernel>.tar.gz </directory>`` Extract, decompress the file.
+	2. ``cd /<kernel>`` Move to kernel directory
 3. ``make menuconfig`` To configure what modules you want installed in the kernel.
 4. ``make fakeroot`` Simulates root privileges for compatibility reasons to compile the kernel.
 5. ``sudo make modules install`` Install the kernel modules.
