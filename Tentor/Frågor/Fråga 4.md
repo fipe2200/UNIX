@@ -3,7 +3,7 @@
 ### How to seamlessly transition users from an old server to a new server without downtime
 * Make a *backup* of your environment into the new server using ``rsync``.
 * Run it there to make sure everything works as intended.
-* Redirect (point) all traffic the new *DNS* so that the old server stops being used.
+* Redirect (point) all traffic to the new *DNS* so that the old server stops being used.
 * Pick a time or day with *low or any traffic* and ``rsync`` again for possible missed changes during the redirect.
 #LENNART_VERIFIED
 
@@ -13,7 +13,7 @@
 
 * ### Building directly into kernel
 	* Installed during kernel *configuration* / *building*.
-		* #Example ``make menuconfig`` To select modules -> ``make modules install`` To install modules into kernel before building the kernel.
+		* #Example ``make menuconfig`` To select modules you want, ``make fakeroot`` to compile kernel, ``make modules install`` To install modules into kernel before installing the kernel itself.
 	* #### Pros
 		* Modules are included in the kernel binary *on boot*.
 			* *Always* available, not too complicated.
