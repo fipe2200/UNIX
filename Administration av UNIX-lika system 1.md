@@ -48,7 +48,7 @@ Förstå tillämpning av labbarna
 * **Boot scripts** (*/etc/init.d*)
 	* syslog, udev, mount, ssh, Runlevels/target.
 		* #Example As we saw in lab 2(?), runlevel directories (*/etc/rc.*d*) are symlinked to */etc/init.d*. 
-			* The runlevel *dictate* which *boot scripts* to run.
+			* The *runlevel* dictate which *boot scripts* to run and not.
 #### Know how to administrate user accounts.
 * ``sudo adduser <username>`` - Create user, enter *user* *information* and *password* (*enter* to skip).
 * ``sudo addgroup <groupname>`` - Create a group.
@@ -332,7 +332,7 @@ During bootstrapping, kernel loads into memory and executes initialization tasks
 * Identify/probe for *hardware*
 	* #Example CPU, RAM, Storage, I/O devices, network interfaces
 * Select *boot device* (*disk*)
-* Identify *EFI* system pfartition
+* Identify *EFI* system partition
 	* Contains *GRUB*
 * Load boot loader (*GRUB*)
 * Determine *kernel* to boot

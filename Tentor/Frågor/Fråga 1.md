@@ -12,7 +12,7 @@
 * #Example
 	- **namespaces** - UserID, Filesystem mounts...
 	- **control groups** (**cgroups**) - Limits use of system resources, prioritizes processes over others.
-	- **Capabilities** - Allows processes to execute sensitive kernel operations & system calls.
+	- **Capabilities** - Allows processes to execute sensitive kernel operations & system calls **instead of full sudo privilege**
 	- **Secure computing mode** (**seccomp**) - Restricts access to system calls, a more fine-grained *Capabilities*.
 ### Compared to a virtual machine
 * Both VM's and Containers look similar on the surface, they are both *portable*, *isolated* & *execution* *environments* with root filesystems.
